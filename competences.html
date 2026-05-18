@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Compétences</title>
+  <title>Compétences – Ismael | BTS SIO SLAM 2026</title>
   <link rel="stylesheet" href="style.css">
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
@@ -11,108 +11,474 @@
 <body>
   <nav>
     <ul>
+      <li><a href="index.html" class="nav-logo">Ismael <span>·</span> Portfolio</a></li>
       <li><a href="index.html">Accueil</a></li>
       <li><a href="competences.html">Compétences</a></li>
       <li><a href="projets.html">Projets</a></li>
-      <li><a href="veille.html">Veille Technologique</a></li>
+      <li><a href="veille.html">Veille</a></li>
     </ul>
   </nav>
-  <div class="d-flex justify-content-center my-4">
-      <iframe src="E4%20-Tableau%20de%20synthese.pdf" width="100%" height="900px" style="border:1px solid #ccc; max-width:900px;"></iframe>
+
+  <main>
+    <!-- Tableau de synthèse PDF -->
+    <div class="section-head">
+      <h2>Tableau de synthèse</h2>
+      <p>Document officiel des réalisations professionnelles (Bloc 1)</p>
     </div>
-  <main class="container mt-4">
-    <h1 class="text-center my-4">Tableau de compétences</h1>
-    <div class="table-responsive">
-      <table class="table table-bordered align-middle text-center">
-        <thead class="table-light">
+    <div style="margin-bottom:3rem;">
+      <iframe src="E4%20-Tableau%20de%20synthese.pdf" class="pdf-embed" title="Tableau de synthèse E4"></iframe>
+    </div>
+
+    <div class="divider"></div>
+
+    <!-- Tableau interactif -->
+    <div class="section-head">
+      <h2>Compétences Bloc 1 — Vue interactive</h2>
+      <p>Cliquez sur un <strong style="color:var(--accent)">X</strong> pour voir le détail de la compétence mobilisée dans ce projet</p>
+    </div>
+
+    <div class="comp-table-wrap" style="margin-bottom:3rem;">
+      <table class="comp-table">
+        <thead>
           <tr>
-            <th>Projet / AP</th>
+            <th>Projet / Réalisation</th>
             <th>Gérer le patrimoine informatique</th>
-            <th>Répondre aux incidents et aux demandes</th>
+            <th>Répondre aux incidents</th>
             <th>Développer la présence en ligne</th>
             <th>Travailler en mode projet</th>
             <th>Mettre à disposition un service</th>
-            <th>Organiser son développement professionnel</th>
+            <th>Développement professionnel</th>
           </tr>
         </thead>
         <tbody>
           <tr>
-            <td><a href="#">M2L site dynamique</a></td>
+            <td>M2L — Site dynamique</td>
             <td></td>
             <td></td>
-            <td><button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-m2l-presence">X</button></td>
-            <td><button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-m2l-projet">X</button></td>
+            <td><button class="x-btn" data-bs-toggle="modal" data-bs-target="#modal-m2l-presence">X</button></td>
+            <td><button class="x-btn" data-bs-toggle="modal" data-bs-target="#modal-m2l-projet">X</button></td>
+            <td><button class="x-btn" data-bs-toggle="modal" data-bs-target="#modal-m2l-service">X</button></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td>Eklekktik — App mobile</td>
+            <td></td>
+            <td><button class="x-btn" data-bs-toggle="modal" data-bs-target="#modal-eklekktik-incidents">X</button></td>
+            <td><button class="x-btn" data-bs-toggle="modal" data-bs-target="#modal-eklekktik-presence">X</button></td>
+            <td><button class="x-btn" data-bs-toggle="modal" data-bs-target="#modal-eklekktik-projet">X</button></td>
+            <td></td>
+            <td><button class="x-btn" data-bs-toggle="modal" data-bs-target="#modal-eklekktik-devpro">X</button></td>
+          </tr>
+          <tr>
+            <td>API Aux Claviers Citoyens</td>
+            <td></td>
+            <td></td>
+            <td><button class="x-btn" data-bs-toggle="modal" data-bs-target="#modal-acc-presence">X</button></td>
+            <td><button class="x-btn" data-bs-toggle="modal" data-bs-target="#modal-acc-projet">X</button></td>
+            <td><button class="x-btn" data-bs-toggle="modal" data-bs-target="#modal-acc-service">X</button></td>
+            <td><button class="x-btn" data-bs-toggle="modal" data-bs-target="#modal-acc-devpro">X</button></td>
+          </tr>
+          <tr>
+            <td>FluoxIP</td>
+            <td><button class="x-btn" data-bs-toggle="modal" data-bs-target="#modal-fluoxip-patrimoine">X</button></td>
+            <td></td>
+            <td></td>
+            <td><button class="x-btn" data-bs-toggle="modal" data-bs-target="#modal-fluoxip-projet">X</button></td>
             <td></td>
             <td></td>
           </tr>
           <tr>
-            <td><a href="#">Eklekktik App mobile</a></td>
-            <td></td>
-            <td><button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-eklekktik-incidents">X</button></td>
-            <td><button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-eklekktik-presence">X</button></td>
-            <td><button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-eklekktik-projet">X</button></td>
-            <td></td>
-            <td><button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-eklekktik-devpro">X</button></td>
-          </tr>
-          <tr>
-            <td><a href="#">API Aux Claviers Citoyens</a></td>
+            <td>Veille technologique CI/CD</td>
             <td></td>
             <td></td>
-            <td><button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-acc-presence">X</button></td>
-            <td><button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-acc-projet">X</button></td>
             <td></td>
             <td></td>
-          </tr>
-          <tr>
-            <td><a href="#">FluoxIP</a></td>
-            <td><button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-fluoxip-patrimoine">X</button></td>
             <td></td>
-            <td></td>
-            <td><button class="btn btn-outline-primary btn-sm" data-bs-toggle="modal" data-bs-target="#modal-fluoxip-projet">X</button></td>
-            <td></td>
-            <td></td>
+            <td><button class="x-btn" data-bs-toggle="modal" data-bs-target="#modal-veille-devpro">X</button></td>
           </tr>
         </tbody>
       </table>
     </div>
 
-    <!-- M2L Site Dynamique Modals -->
-    <div class="modal fade" id="modal-m2l-presence" tabindex="-1">
-      <div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header bg-primary text-white"><h5 class="modal-title">M2L site dynamique – Développer la présence en ligne</h5><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div><div class="modal-body"><ul><li>Référencer les services en ligne de l'organisation et mesurer leur visibilité</li><li>Participer à l'évolution d'un site Web exploitant les données de l'organisation</li></ul><hr><h6 class="mt-3 mb-2">Screenshots du projet</h6><div class="row g-2"><div class="col-md-6"><img src="img/m2l_1.png" alt="M2L Screenshot 1" class="img-fluid rounded"></div><div class="col-md-6"><img src="img/m2l_3.png" alt="M2L Screenshot 2" class="img-fluid rounded"></div></div></div></div></div>
-    </div>
-    <div class="modal fade" id="modal-m2l-projet" tabindex="-1">
-      <div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header bg-primary text-white"><h5 class="modal-title">M2L site dynamique – Travailler en mode projet</h5><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div><div class="modal-body"><ul><li>Analyser les objectifs et les modalités d'organisation d'un projet</li><li>Planifier les activités</li><li>Évaluer les indicateurs de suivi d'un projet et analyser les écarts</li></ul><hr><h6 class="mt-3 mb-2">Screenshots du projet</h6><div class="row g-2"><div class="col-md-6"><img src="images/m2l-projet-1.png" alt="M2L Screenshot 1" class="img-fluid rounded"></div><div class="col-md-6"><img src="images/m2l-projet-2.png" alt="M2L Screenshot 2" class="img-fluid rounded"></div></div></div></div></div>
-    </div>
+    <div class="divider"></div>
 
-    <!-- Eklekktik App Mobile Modals -->
-    <div class="modal fade" id="modal-eklekktik-incidents" tabindex="-1">
-      <div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header bg-primary text-white"><h5 class="modal-title">Eklekktik App mobile – Répondre aux incidents</h5><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div><div class="modal-body"><ul><li>Collecter, suivre et orienter des demandes</li><li>Traiter des demandes concernant les applications</li></ul><hr><h6 class="mt-3 mb-2">Screenshots du projet</h6><div class="row g-2"><div class="col-md-6"><img src="img/eklekktik_1.png" alt="Eklekktik Screenshot 1" class="img-fluid rounded"></div></div></div></div></div>
+    <!-- Compétences cards -->
+    <div class="section-head">
+      <h2>Description des compétences</h2>
+      <p>Les 6 compétences du Bloc 1 évaluées lors de l'épreuve E4</p>
     </div>
-    <div class="modal fade" id="modal-eklekktik-presence" tabindex="-1">
-      <div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header bg-primary text-white"><h5 class="modal-title">Eklekktik App mobile – Développer la présence en ligne</h5><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div><div class="modal-body"><ul><li>Participer à la valorisation de l'image de l'organisation sur les médias numériques en tenant compte du cadre juridique et des enjeux économiques</li><li>Référencer les services en ligne de l'organisation et mesurer leur visibilité</li><li>Participer à l'évolution d'un site Web exploitant les données de l'organisation</li></ul><hr><h6 class="mt-3 mb-2">Screenshots du projet</h6><div class="row g-2"><div class="col-md-6"><img src="img/eklekktik_3.png" alt="Eklekktik Screenshot 1" class="img-fluid rounded"></div><div class="col-md-6"><img src="img/eklekktik_2.png" alt="Eklekktik Screenshot 2" class="img-fluid rounded"></div></div></div></div></div>
-    </div>
-    <div class="modal fade" id="modal-eklekktik-projet" tabindex="-1">
-      <div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header bg-primary text-white"><h5 class="modal-title">Eklekktik App mobile – Travailler en mode projet</h5><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div><div class="modal-body"><ul><li>Analyser les objectifs et les modalités d'organisation d'un projet</li><li>Planifier les activités</li><li>Évaluer les indicateurs de suivi d'un projet et analyser les écarts</li></ul><hr><h6 class="mt-3 mb-2">Screenshots du projet</h6><div class="row g-2"><div class="col-md-6"><img src="images/eklekktik-projet-1.png" alt="Eklekktik Screenshot 1" class="img-fluid rounded"></div><div class="col-md-6"><img src="images/eklekktik-projet-2.png" alt="Eklekktik Screenshot 2" class="img-fluid rounded"></div></div></div></div></div>
-    </div>
-    <div class="modal fade" id="modal-eklekktik-devpro" tabindex="-1">
-      <div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header bg-primary text-white"><h5 class="modal-title">Eklekktik App mobile – Organiser son développement professionnel</h5><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div><div class="modal-body"><ul><li>Mettre en place son environnement d'apprentissage personnel</li><li>Mettre en œuvre des outils et stratégies de veille informationnelle</li><li>Gérer son identité professionnelle</li><li>Développer son projet professionnel</li></ul><hr><h6 class="mt-3 mb-2">Screenshots du projet</h6><div class="row g-2"><div class="col-md-6"><img src="images/eklekktik-devpro-1.png" alt="Eklekktik Screenshot 1" class="img-fluid rounded"></div><div class="col-md-6"><img src="images/eklekktik-devpro-2.png" alt="Eklekktik Screenshot 2" class="img-fluid rounded"></div></div></div></div></div>
-    </div>
-
-    <!-- API Aux Claviers Citoyens Modals -->
-    <div class="modal fade" id="modal-acc-presence" tabindex="-1">
-      <div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header bg-primary text-white"><h5 class="modal-title">API Aux Claviers Citoyens – Développer la présence en ligne</h5><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div><div class="modal-body"><ul><li>Participer à la valorisation de l'image de l'organisation sur les médias numériques en tenant compte du cadre juridique et des enjeux économiques</li><li>Référencer les services en ligne de l'organisation et mesurer leur visibilité</li><li>Participer à l'évolution d'un site Web exploitant les données de l'organisation</li></ul><hr><h6 class="mt-3 mb-2">Screenshots du projet</h6><div class="row g-2"><div class="col-md-6"><img src="images/acc-presence-1.png" alt="ACC Screenshot 1" class="img-fluid rounded"></div><div class="col-md-6"><img src="images/acc-presence-2.png" alt="ACC Screenshot 2" class="img-fluid rounded"></div></div></div></div></div>
-    </div>
-    <div class="modal fade" id="modal-acc-projet" tabindex="-1">
-      <div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header bg-primary text-white"><h5 class="modal-title">API Aux Claviers Citoyens – Travailler en mode projet</h5><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div><div class="modal-body"><ul><li>Analyser les objectifs et les modalités d'organisation d'un projet</li><li>Planifier les activités</li><li>Évaluer les indicateurs de suivi d'un projet et analyser les écarts</li></ul><hr><h6 class="mt-3 mb-2">Screenshots du projet</h6><div class="row g-2"><div class="col-md-6"><img src="images/acc-projet-1.png" alt="ACC Screenshot 1" class="img-fluid rounded"></div><div class="col-md-6"><img src="images/acc-projet-2.png" alt="ACC Screenshot 2" class="img-fluid rounded"></div></div></div></div></div>
-    </div>
-
-    <!-- FluoxIP Modals -->
-    <div class="modal fade" id="modal-fluoxip-patrimoine" tabindex="-1">
-      <div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header bg-primary text-white"><h5 class="modal-title">FluoxIP – Gérer le patrimoine informatique</h5><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div><div class="modal-body"><ul><li>Recenser et identifier les ressources numériques</li><li>Mettre en place et vérifier les niveaux d'habilitation associés à un service</li><li>Vérifier les conditions de la continuité d'un service informatique</li><li>Gérer des sauvegardes</li><li>Vérifier le respect des règles d'utilisation des ressources numériques</li></ul><hr><h6 class="mt-3 mb-2">Screenshots du projet</h6><div class="row g-2"><div class="col-md-6"><img src="img/fluxoip_1.png" alt="FluoxIP Screenshot 1" class="img-fluid rounded"></div><div class="col-md-6"><img src="img/fluxoip_2.png" alt="FluoxIP Screenshot 2" class="img-fluid rounded"></div></div></div></div></div>
-    </div>
-    <div class="modal fade" id="modal-fluoxip-projet" tabindex="-1">
-      <div class="modal-dialog modal-lg"><div class="modal-content"><div class="modal-header bg-primary text-white"><h5 class="modal-title">FluoxIP – Travailler en mode projet</h5><button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div><div class="modal-body"><ul><li>Analyser les objectifs et les modalités d'organisation d'un projet</li><li>Planifier les activités</li><li>Évaluer les indicateurs de suivi d'un projet et analyser les écarts</li></ul><hr><h6 class="mt-3 mb-2">Screenshots du projet</h6><div class="row g-2"><div class="col-md-6"><img src="images/fluoxip-projet-1.png" alt="FluoxIP Screenshot 1" class="img-fluid rounded"></div><div class="col-md-6"><img src="images/fluoxip-projet-2.png" alt="FluoxIP Screenshot 2" class="img-fluid rounded"></div></div></div></div></div>
+    <div class="grid-2" style="margin-bottom:3rem;">
+      <div class="card">
+        <div class="card-icon">🗂️</div>
+        <h3>Gérer le patrimoine informatique</h3>
+        <p>Recenser les ressources numériques, exploiter les référentiels et normes, gérer les habilitations, sauvegardes et conditions de continuité de service.</p>
+        <div class="tags" style="margin-top:0.75rem;"><span class="tag purple">FluoxIP</span></div>
+      </div>
+      <div class="card">
+        <div class="card-icon">🔧</div>
+        <h3>Répondre aux incidents et demandes</h3>
+        <p>Collecter, suivre et traiter des demandes d'assistance ou d'évolution concernant les services réseau, système et applicatifs.</p>
+        <div class="tags" style="margin-top:0.75rem;"><span class="tag purple">Eklekktik</span></div>
+      </div>
+      <div class="card">
+        <div class="card-icon">🌐</div>
+        <h3>Développer la présence en ligne</h3>
+        <p>Valoriser l'image de l'organisation sur les médias numériques, référencer les services en ligne, faire évoluer un site web exploitant les données.</p>
+        <div class="tags" style="margin-top:0.75rem;"><span class="tag purple">M2L</span><span class="tag purple">Eklekktik</span><span class="tag purple">API ACC</span></div>
+      </div>
+      <div class="card">
+        <div class="card-icon">📋</div>
+        <h3>Travailler en mode projet</h3>
+        <p>Analyser les objectifs, planifier les activités, évaluer les indicateurs de suivi et analyser les écarts d'un projet informatique.</p>
+        <div class="tags" style="margin-top:0.75rem;"><span class="tag purple">Tous les projets</span></div>
+      </div>
+      <div class="card">
+        <div class="card-icon">🚀</div>
+        <h3>Mettre à disposition un service</h3>
+        <p>Réaliser les tests d'intégration et d'acceptation, déployer un service, accompagner les utilisateurs dans la prise en main.</p>
+        <div class="tags" style="margin-top:0.75rem;"><span class="tag purple">M2L</span><span class="tag purple">API ACC</span></div>
+      </div>
+      <div class="card">
+        <div class="card-icon">📈</div>
+        <h3>Organiser son développement professionnel</h3>
+        <p>Mettre en place un environnement d'apprentissage, réaliser une veille technologique régulière, gérer son identité professionnelle.</p>
+        <div class="tags" style="margin-top:0.75rem;"><span class="tag purple">Eklekktik</span><span class="tag purple">API ACC</span><span class="tag purple">Veille CI/CD</span></div>
+      </div>
     </div>
   </main>
+
+  <!-- ═══ MODALS ═══════════════════════════════════════════════════════ -->
+
+  <!-- M2L -->
+  <div class="modal fade" id="modal-m2l-presence" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">M2L — Développer la présence en ligne</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>Dans le cadre du projet M2L, le site web constitue la vitrine numérique de l'organisation. J'ai participé à l'évolution de ce site exploitant les données de l'organisation.</p>
+          <ul>
+            <li>Référencement des formations disponibles sur la plateforme web</li>
+            <li>Participation à l'évolution du site web en intégrant le module de gestion des formations</li>
+            <li>Respect des enjeux juridiques liés à la publication de données (mentions légales, RGPD)</li>
+          </ul>
+          <h6>Captures du projet</h6>
+          <div class="row g-2">
+            <div class="col-md-6"><img src="img/m2l_1.png" alt="M2L" class="img-fluid rounded"></div>
+            <div class="col-md-6"><img src="img/m2l_3.png" alt="M2L" class="img-fluid rounded"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modal-m2l-projet" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">M2L — Travailler en mode projet</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>Le projet M2L a été réalisé en groupe de 3 étudiants. Il m'a permis de travailler selon une organisation projet structurée.</p>
+          <ul>
+            <li>Analyse des objectifs et du cahier des charges fourni par l'organisation</li>
+            <li>Répartition des tâches au sein du groupe (j'étais responsable du module formations)</li>
+            <li>Planification des développements et suivi de l'avancement</li>
+            <li>Livraison du module fonctionnel dans les délais impartis</li>
+          </ul>
+          <h6>Captures du projet</h6>
+          <div class="row g-2">
+            <div class="col-md-6"><img src="img/m2l_2.png" alt="M2L" class="img-fluid rounded"></div>
+            <div class="col-md-6"><img src="img/m2l_3.png" alt="M2L" class="img-fluid rounded"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modal-m2l-service" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">M2L — Mettre à disposition un service</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>Le module de gestion des formations a été développé, testé et intégré au site existant afin d'être mis à disposition des utilisateurs.</p>
+          <ul>
+            <li>Rédaction et exécution de tests fonctionnels sur le module formations</li>
+            <li>Vérification du bon fonctionnement des droits (responsable de formation vs utilisateur simple)</li>
+            <li>Déploiement du module sur l'environnement de test</li>
+            <li>Vérification que les responsables peuvent accepter/refuser les demandes d'inscription</li>
+          </ul>
+          <h6>Captures du projet</h6>
+          <div class="row g-2">
+            <div class="col-md-6"><img src="img/m2l_1.png" alt="M2L" class="img-fluid rounded"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Eklekktik -->
+  <div class="modal fade" id="modal-eklekktik-incidents" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Eklekktik — Répondre aux incidents et demandes</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>En stage au sein de l'association Eklekktik, j'ai été amené à traiter des demandes d'évolution et des retours utilisateurs sur l'application mobile.</p>
+          <ul>
+            <li>Collecte et suivi des retours des membres de l'association sur les fonctionnalités</li>
+            <li>Diagnostic des anomalies signalées et proposition de correctifs</li>
+            <li>Traitement des demandes d'évolution de l'application</li>
+            <li>Communication avec les parties prenantes pour valider les corrections apportées</li>
+          </ul>
+          <h6>Captures du projet</h6>
+          <div class="row g-2">
+            <div class="col-md-6"><img src="img/eklekktik_1.png" alt="Eklekktik" class="img-fluid rounded"></div>
+            <div class="col-md-6"><img src="img/eklekktik_2.png" alt="Eklekktik" class="img-fluid rounded"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modal-eklekktik-presence" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Eklekktik — Développer la présence en ligne</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>L'application mobile Eklekktik est le vecteur principal de présence numérique de l'association. Sa conception visait à valoriser l'image de l'organisation.</p>
+          <ul>
+            <li>Participation à la valorisation de l'image de l'association sur les médias numériques</li>
+            <li>Développement de l'application permettant à l'association d'être visible et accessible via mobile</li>
+            <li>Prise en compte des enjeux juridiques liés aux données personnelles des membres (RGPD)</li>
+            <li>Contribution à l'augmentation de la visibilité numérique de l'association</li>
+          </ul>
+          <h6>Captures du projet</h6>
+          <div class="row g-2">
+            <div class="col-md-6"><img src="img/eklekktik_3.png" alt="Eklekktik" class="img-fluid rounded"></div>
+            <div class="col-md-6"><img src="img/eklekktik_4.png" alt="Eklekktik" class="img-fluid rounded"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modal-eklekktik-projet" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Eklekktik — Travailler en mode projet</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>Le développement de l'application Eklekktik s'est déroulé dans le cadre d'un stage avec une organisation projet claire.</p>
+          <ul>
+            <li>Analyse des besoins de l'association et définition des fonctionnalités à développer</li>
+            <li>Planification des sprints de développement</li>
+            <li>Présentation régulière de l'avancement aux responsables de l'association</li>
+            <li>Livraison d'une application opérationnelle à la fin du stage</li>
+          </ul>
+          <h6>Captures du projet</h6>
+          <div class="row g-2">
+            <div class="col-md-6"><img src="img/eklekktik_1.png" alt="Eklekktik" class="img-fluid rounded"></div>
+            <div class="col-md-6"><img src="img/eklekktik_2.png" alt="Eklekktik" class="img-fluid rounded"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modal-eklekktik-devpro" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Eklekktik — Développement professionnel</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>Ce stage a constitué une étape clé dans mon développement professionnel, en me confrontant à un environnement de travail réel.</p>
+          <ul>
+            <li>Mise en place d'un environnement de développement mobile autonome</li>
+            <li>Auto-formation aux technologies utilisées dans le projet (Android, Java)</li>
+            <li>Veille sur les bonnes pratiques de développement mobile</li>
+            <li>Développement de ma capacité à travailler en autonomie et à communiquer avec une équipe</li>
+          </ul>
+          <h6>Captures du projet</h6>
+          <div class="row g-2">
+            <div class="col-md-6"><img src="img/eklekktik_3.png" alt="Eklekktik" class="img-fluid rounded"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- API Aux Claviers Citoyens -->
+  <div class="modal fade" id="modal-acc-presence" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">API ACC — Développer la présence en ligne</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>La plateforme Aux Claviers Citoyens vise à développer la présence numérique de l'e-sport associé à la Défense française.</p>
+          <ul>
+            <li>Développement d'une API exposant les données de l'organisation (joueurs, équipes, tournois)</li>
+            <li>Contribution à la création d'un service numérique valorisant l'image de l'organisation</li>
+            <li>Prise en compte des exigences de sécurité liées au contexte (Armée française)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modal-acc-projet" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">API ACC — Travailler en mode projet</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>Ce projet a été conduit selon une méthodologie de développement structurée, dans un environnement professionnel exigeant.</p>
+          <ul>
+            <li>Analyse du cahier des charges et des exigences fonctionnelles et de sécurité</li>
+            <li>Planification du développement du module d'authentification</li>
+            <li>Collaboration avec d'autres développeurs et parties prenantes (Armée française)</li>
+            <li>Suivi de l'avancement et ajustements selon les retours</li>
+            <li>Documentation du module développé</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modal-acc-service" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">API ACC — Mettre à disposition un service</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>Le module d'authentification que j'ai développé a été testé et intégré à l'API pour être mis à disposition des utilisateurs.</p>
+          <ul>
+            <li>Rédaction de tests unitaires et fonctionnels sur les endpoints d'authentification</li>
+            <li>Vérification de la sécurité (hash des mots de passe, expiration des tokens JWT)</li>
+            <li>Déploiement du module sur l'environnement de test puis de production</li>
+            <li>Documentation des endpoints pour les développeurs front-end</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modal-acc-devpro" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">API ACC — Développement professionnel</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>Ce stage a été l'occasion de développer des compétences techniques avancées et de renforcer mon profil professionnel.</p>
+          <ul>
+            <li>Montée en compétences sur l'authentification et la sécurité des APIs (JWT, RBAC)</li>
+            <li>Veille sur les bonnes pratiques de développement d'APIs sécurisées</li>
+            <li>Travail dans un contexte professionnel exigeant (collaboration avec la Défense)</li>
+            <li>Renforcement de mon identité professionnelle autour du développement back-end sécurisé</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FluoxIP -->
+  <div class="modal fade" id="modal-fluoxip-patrimoine" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">FluoxIP — Gérer le patrimoine informatique</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>FluoxIP est un outil de recensement et de gestion du patrimoine informatique (ressources réseau et équipements).</p>
+          <ul>
+            <li>Recensement et identification des ressources numériques (équipements, adresses IP)</li>
+            <li>Exploitation des référentiels et normes adoptés par le prestataire informatique</li>
+            <li>Mise en place et vérification des niveaux d'habilitation associés aux services</li>
+            <li>Vérification des conditions de continuité de service informatique</li>
+            <li>Vérification du respect des règles d'utilisation des ressources numériques</li>
+          </ul>
+          <h6>Captures du projet</h6>
+          <div class="row g-2">
+            <div class="col-md-6"><img src="img/fluxoip_1.png" alt="FluoxIP" class="img-fluid rounded"></div>
+            <div class="col-md-6"><img src="img/fluxoip_2.png" alt="FluoxIP" class="img-fluid rounded"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modal-fluoxip-projet" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">FluoxIP — Travailler en mode projet</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>Le développement de FluoxIP a suivi une démarche projet avec des objectifs clairement définis.</p>
+          <ul>
+            <li>Analyse des besoins en gestion de patrimoine réseau</li>
+            <li>Planification des fonctionnalités à développer</li>
+            <li>Réalisation des livrables conformément au cahier des charges</li>
+          </ul>
+          <h6>Captures du projet</h6>
+          <div class="row g-2">
+            <div class="col-md-6"><img src="img/fluxoip_1.png" alt="FluoxIP" class="img-fluid rounded"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Veille -->
+  <div class="modal fade" id="modal-veille-devpro" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Veille CI/CD — Développement professionnel</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>Ma veille technologique sur le CI/CD et le déploiement d'applications illustre ma démarche d'apprentissage autonome et continue.</p>
+          <ul>
+            <li>Mise en place d'un agrégateur de flux (Daily.dev) pour centraliser les sources techniques</li>
+            <li>Suivi régulier des évolutions : GitHub Actions, GitLab CI, Docker, Kubernetes</li>
+            <li>Utilisation de YouTube (TechWorld with Nana, Fireship) pour rester à jour</li>
+            <li>Alertes Google sur les mots-clés CI/CD, DevOps, déploiement</li>
+            <li>Synthèse des connaissances acquises dans ce portfolio</li>
+          </ul>
+          <p>Cette veille régulière m'a permis de repérer les technologies émergentes du secteur et de renforcer mes compétences en automatisation et déploiement.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    Portfolio BTS SIO SLAM — Ismael — Session <span>2026</span>
+  </footer>
 </body>
 </html>
