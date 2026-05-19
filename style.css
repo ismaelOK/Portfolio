@@ -339,29 +339,33 @@ main {
   min-width: 700px;
 }
 .comp-table th {
-  background: var(--surface2);
-  color: var(--accent);
+  background: var(--surface3);
+  color: var(--text);
   padding: 0.85rem 0.75rem;
   text-align: center;
-  font-size: 0.75rem;
-  letter-spacing: 0.04em;
-  font-weight: 700;
-  text-transform: uppercase;
-  border-bottom: 2px solid rgba(167, 139, 250, 0.2);
-  white-space: nowrap;
+  font-size: 0.72rem;
+  letter-spacing: 0.03em;
+  font-weight: 600;
+  border-bottom: 2px solid rgba(167, 139, 250, 0.3);
+  border-right: 1px solid rgba(255,255,255,0.06);
+  white-space: normal;
+  line-height: 1.4;
 }
-.comp-table th:first-child { text-align: left; min-width: 160px; }
+.comp-table th:first-child { text-align: left; min-width: 170px; }
+.comp-table th:not(:first-child) { max-width: 120px; }
 .comp-table td {
   padding: 0.85rem 0.75rem;
   text-align: center;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.04);
-  color: var(--text-muted);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  border-right: 1px solid rgba(255, 255, 255, 0.04);
+  color: var(--text);
 }
-.comp-table tr:hover td { background: rgba(167, 139, 250, 0.04); }
+.comp-table tr:hover td { background: rgba(167, 139, 250, 0.05); }
 .comp-table td:first-child {
   text-align: left;
   color: var(--text);
   font-weight: 600;
+  background: var(--surface2);
 }
 .x-btn {
   background: rgba(167, 139, 250, 0.12);
