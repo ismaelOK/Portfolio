@@ -5,6 +5,27 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Veille Technologique – Ismael Ounacer | BTS SIO SLAM 2026</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    #shader-canvas {
+      width: 100%;
+      height: 360px;
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      display: block;
+      background: #0c0c16;
+    }
+    .shader-label {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      text-align: center;
+      margin-top: 0.6rem;
+      letter-spacing: 0.04em;
+    }
+    .shader-label code {
+      color: var(--accent3);
+      font-size: 0.72rem;
+    }
+  </style>
 </head>
 <body>
   <nav>
@@ -20,268 +41,131 @@
   <main>
     <div class="section-head" style="margin-bottom:2.5rem;">
       <h2>Veille Technologique</h2>
-      <p>APIs graphiques — OpenGL, Vulkan, WebGL et l'avenir du rendu en temps réel &mdash; Compétence B1.6</p>
+      <p>APIs graphiques — OpenGL, Vulkan, WebGL, WebGPU &mdash; Compétence B1.6</p>
     </div>
 
-    <!-- Qu'est-ce que la veille -->
+    <!-- Live shader demo -->
+    <div class="veille-card" style="padding:1.5rem;">
+      <h2>Démo — Ray marching en WebGL</h2>
+      <canvas id="shader-canvas"></canvas>
+      <p class="shader-label">
+        Sphère rendue en temps réel via un fragment shader WebGL —
+        <code>SDF</code> · <code>ray marching</code> · <code>éclairage Phong</code> · <code>GLSL</code>
+      </p>
+    </div>
+
+    <!-- Intro -->
     <div class="veille-card">
-      <h2>Qu'est-ce que la veille technologique ?</h2>
+      <h2>Sujet et démarche</h2>
       <p>
-        La veille technologique consiste à surveiller en continu les évolutions d'un domaine technique afin d'anticiper les changements,
-        identifier les technologies émergentes et adapter ses pratiques en conséquence. Ce n'est pas une lecture ponctuelle
-        d'un article : c'est une démarche régulière et organisée.
+        La veille technologique est une démarche continue : surveiller les évolutions d'un domaine,
+        identifier les technologies montantes et adapter ses pratiques. Pour une entreprise dans le secteur
+        du logiciel, c'est une condition pour rester compétitif et éviter la dette technique.
       </p>
       <p style="margin-top:0.85rem;">
-        Pour une entreprise, rester à jour est une question de survie concurrentielle. Un éditeur de logiciel qui ignore
-        qu'une API graphique devient le standard industriel risque de produire des applications incompatibles avec les
-        systèmes modernes, ou d'hériter d'une dette technique difficile à résorber.
-      </p>
-      <p style="margin-top:0.85rem;">
-        Dans le domaine de l'informatique graphique, les enjeux sont particulièrement marqués : les APIs évoluent rapidement
-        (passage d'OpenGL à Vulkan, essor de WebGPU), les GPU deviennent des outils de calcul général (GPGPU), et les
-        moteurs de rendu temps réel trouvent des débouchés bien au-delà du jeu vidéo — simulation, médecine, architecture, art génératif.
+        J'ai choisi de me concentrer sur les <strong>APIs graphiques</strong> — OpenGL, Vulkan, WebGL, WebGPU —
+        parce que c'est à l'intersection de ce qui m'intéresse : la programmation bas niveau et la création visuelle.
+        Le domaine est en pleine mutation depuis quelques années, ce qui en fait un sujet de veille actif et riche.
       </p>
     </div>
 
-    <!-- Pourquoi ce sujet -->
+    <!-- Sources -->
     <div class="veille-card">
-      <h2>Pourquoi les APIs graphiques ?</h2>
-      <p>
-        Je m'intéresse à l'art numérique et au graphisme depuis longtemps. En apprenant à programmer, j'ai naturellement voulu
-        comprendre comment les images sont produites par les machines — comment un GPU transforme des données mathématiques
-        en pixels à l'écran. C'est ce qui m'a amené à m'intéresser aux APIs graphiques bas niveau.
-      </p>
-      <p style="margin-top:0.85rem;">
-        Ce domaine est à l'intersection de ce que j'aime : la rigueur technique du code et l'aspect visuel et créatif
-        du résultat. C'est aussi un secteur en pleine mutation, ce qui en fait un sujet de veille particulièrement riche.
-      </p>
+      <h2>Sources</h2>
+      <ul>
+        <li>
+          <strong>Serveurs Discord spécialisés</strong> — la principale source au quotidien.
+          Des communautés d'enthousiastes et de professionnels (graphistes, développeurs de moteurs, demosceners)
+          qui partagent leurs expériences, discutent des dernières sorties (nouvelles extensions Vulkan,
+          avancement de WebGPU dans les navigateurs, benchmarks GPU) et publient leurs créations.
+          C'est là que l'actualité arrive en premier, avant les articles.
+        </li>
+        <li>
+          <strong>Shadertoy</strong> (<a href="https://www.shadertoy.com" target="_blank" rel="noopener">shadertoy.com</a>) —
+          plateforme de shaders GLSL en temps réel. Permet d'expérimenter des techniques (ray marching, SDF,
+          fluid simulation) directement dans le navigateur et de voir ce que d'autres font.
+        </li>
+        <li>
+          <strong>learnopengl.com &amp; vulkan-tutorial.com</strong> — références pour comprendre les APIs
+          en profondeur, pas juste les utiliser en surface.
+        </li>
+        <li>
+          <strong>YouTube</strong> : TheCherno (série moteur de rendu en C++),
+          Brendan Galea (Vulkan pas à pas), Sebastian Lague (experiments visuels).
+        </li>
+        <li>
+          <strong>Documentation officielle</strong> : Khronos Group (OpenGL, Vulkan),
+          W3C (spec WebGPU), MDN (WebGL).
+        </li>
+      </ul>
     </div>
 
-    <!-- Panorama des APIs -->
+    <!-- API cards -->
     <div class="veille-card">
-      <h2>Panorama des principales APIs graphiques</h2>
-
-      <p style="margin-bottom:1.25rem;">
-        Une API graphique est une interface entre le code applicatif et le GPU. Elle définit comment envoyer des données
-        géométriques, des textures et des instructions de rendu au matériel graphique.
+      <h2>Panorama des APIs</h2>
+      <p style="margin-bottom:1.25rem; color:var(--text-muted);">
+        Une API graphique est l'interface entre le code et le GPU — elle définit comment envoyer géométrie,
+        textures et instructions de rendu au matériel.
       </p>
+      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap:0.85rem;">
 
-      <div style="display:grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap:1rem; margin-bottom:1rem;">
-
-        <div style="background:var(--surface2); border:1px solid var(--border); border-radius:10px; padding:1.25rem;">
-          <div style="font-size:0.7rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent2); margin-bottom:0.5rem;">Depuis 1992 · Encore très présent</div>
-          <h3 style="font-size:1rem; color:var(--text); margin-bottom:0.6rem;">OpenGL</h3>
-          <p style="font-size:0.87rem; color:var(--text-muted); line-height:1.65;">
-            Standard historique, multiplateforme. API de haut niveau relativement accessible. Maintenu par le Khronos Group
-            mais plus en développement actif depuis 2017. Encore massivement utilisé dans les outils éducatifs, les logiciels
-            CAO, et les applications embarquées. Le point d'entrée naturel pour apprendre le rendu 3D.
-          </p>
-          <div class="tags" style="margin-top:0.75rem;">
-            <span class="tag">C/C++</span>
-            <span class="tag">Multiplateforme</span>
-            <span class="tag amber">Mature</span>
-          </div>
+        <div style="background:var(--surface2); border:1px solid var(--border); border-radius:10px; padding:1.1rem;">
+          <div style="font-size:0.68rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent2); margin-bottom:0.4rem;">1992 · Toujours présent</div>
+          <h3 style="font-size:0.95rem; color:var(--text); margin-bottom:0.5rem;">OpenGL</h3>
+          <p style="font-size:0.84rem; color:var(--text-muted); line-height:1.6;">Standard historique multiplateforme. Plus maintenu activement depuis 2017 mais encore très répandu dans les outils CAO, éducatifs et embarqués. Point d'entrée naturel pour apprendre le rendu 3D.</p>
+          <div class="tags" style="margin-top:0.6rem;"><span class="tag amber">Mature</span><span class="tag">C/C++</span></div>
         </div>
 
-        <div style="background:var(--surface2); border:1px solid var(--border); border-radius:10px; padding:1.25rem;">
-          <div style="font-size:0.7rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); margin-bottom:0.5rem;">Depuis 2016 · Standard montant</div>
-          <h3 style="font-size:1rem; color:var(--text); margin-bottom:0.6rem;">Vulkan</h3>
-          <p style="font-size:0.87rem; color:var(--text-muted); line-height:1.65;">
-            Successeur d'OpenGL développé par le Khronos Group. API bas niveau qui expose directement le GPU au développeur :
-            gestion explicite de la mémoire, des command buffers, de la synchronisation. Verbeux mais extrêmement performant.
-            Adopté par les jeux AAA, les moteurs (Unreal, Unity), et les applications de calcul intensif.
-          </p>
-          <div class="tags" style="margin-top:0.75rem;">
-            <span class="tag">C/C++</span>
-            <span class="tag">Multiplateforme</span>
-            <span class="tag purple">Haute performance</span>
-          </div>
+        <div style="background:var(--surface2); border:1px solid var(--border); border-radius:10px; padding:1.1rem;">
+          <div style="font-size:0.68rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); margin-bottom:0.4rem;">2016 · Standard montant</div>
+          <h3 style="font-size:0.95rem; color:var(--text); margin-bottom:0.5rem;">Vulkan</h3>
+          <p style="font-size:0.84rem; color:var(--text-muted); line-height:1.6;">Successeur d'OpenGL, bas niveau : gestion explicite de la mémoire, command buffers, synchronisation. Verbeux mais très performant. Adopté par les jeux AAA et les moteurs (Unreal, Unity).</p>
+          <div class="tags" style="margin-top:0.6rem;"><span class="tag purple">Haute perf.</span><span class="tag">C/C++</span></div>
         </div>
 
-        <div style="background:var(--surface2); border:1px solid var(--border); border-radius:10px; padding:1.25rem;">
-          <div style="font-size:0.7rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent3); margin-bottom:0.5rem;">Depuis 2011 · Web standard</div>
-          <h3 style="font-size:1rem; color:var(--text); margin-bottom:0.6rem;">WebGL / WebGL 2</h3>
-          <p style="font-size:0.87rem; color:var(--text-muted); line-height:1.65;">
-            Implémentation d'OpenGL ES dans le navigateur, accessible via JavaScript. Permet de faire du rendu 3D directement
-            dans une page web sans plugin. Utilisé par Three.js, Babylon.js, des visualisations de données et des expériences
-            artistiques interactives. WebGL 2 apporte les fonctionnalités d'OpenGL ES 3.0.
-          </p>
-          <div class="tags" style="margin-top:0.75rem;">
-            <span class="tag">JavaScript</span>
-            <span class="tag">Navigateur</span>
-            <span class="tag green">Accessible</span>
-          </div>
+        <div style="background:var(--surface2); border:1px solid var(--border); border-radius:10px; padding:1.1rem;">
+          <div style="font-size:0.68rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent3); margin-bottom:0.4rem;">2011 · Standard web</div>
+          <h3 style="font-size:0.95rem; color:var(--text); margin-bottom:0.5rem;">WebGL / WebGL 2</h3>
+          <p style="font-size:0.84rem; color:var(--text-muted); line-height:1.6;">OpenGL ES dans le navigateur via JavaScript. Utilisé par Three.js, Babylon.js, et les expériences artistiques interactives. La démo ci-dessus tourne en WebGL.</p>
+          <div class="tags" style="margin-top:0.6rem;"><span class="tag green">Navigateur</span><span class="tag">JS / GLSL</span></div>
         </div>
 
-        <div style="background:var(--surface2); border:1px solid var(--border); border-radius:10px; padding:1.25rem;">
-          <div style="font-size:0.7rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); margin-bottom:0.5rem;">Depuis 2023 · Futur du web graphique</div>
-          <h3 style="font-size:1rem; color:var(--text); margin-bottom:0.6rem;">WebGPU</h3>
-          <p style="font-size:0.87rem; color:var(--text-muted); line-height:1.65;">
-            Nouvelle API web graphique standardisée par le W3C, inspirée de Vulkan, Metal et Direct3D 12. Accès au GPU moderne
-            depuis le navigateur, avec support du compute shader. Disponible dans Chrome depuis 2023. Représente l'avenir
-            du graphisme et du calcul GPU sur le web — Three.js et Babylon.js migrent progressivement vers WebGPU.
-          </p>
-          <div class="tags" style="margin-top:0.75rem;">
-            <span class="tag">JavaScript / WGSL</span>
-            <span class="tag">Navigateur</span>
-            <span class="tag purple">Émergent</span>
-          </div>
+        <div style="background:var(--surface2); border:1px solid var(--border); border-radius:10px; padding:1.1rem;">
+          <div style="font-size:0.68rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent); margin-bottom:0.4rem;">2023 · Futur du web</div>
+          <h3 style="font-size:0.95rem; color:var(--text); margin-bottom:0.5rem;">WebGPU</h3>
+          <p style="font-size:0.84rem; color:var(--text-muted); line-height:1.6;">Nouvelle API W3C inspirée de Vulkan/Metal/DX12, disponible dans Chrome depuis 2023. Compute shaders, WGSL, performances proches du natif. Three.js et Babylon.js migrent progressivement.</p>
+          <div class="tags" style="margin-top:0.6rem;"><span class="tag purple">Émergent</span><span class="tag">JS / WGSL</span></div>
         </div>
 
-        <div style="background:var(--surface2); border:1px solid var(--border); border-radius:10px; padding:1.25rem;">
-          <div style="font-size:0.7rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent2); margin-bottom:0.5rem;">Windows uniquement</div>
-          <h3 style="font-size:1rem; color:var(--text); margin-bottom:0.6rem;">Direct3D / DirectX</h3>
-          <p style="font-size:0.87rem; color:var(--text-muted); line-height:1.65;">
-            API Microsoft, dominante sur Windows et Xbox. Direct3D 12 est à Vulkan ce que Direct3D 11 est à OpenGL : une version
-            bas niveau plus performante mais plus complexe. Incontournable dans l'écosystème jeu vidéo PC et console Microsoft.
-            DXR (DirectX Raytracing) a popularisé le ray tracing en temps réel depuis 2018.
-          </p>
-          <div class="tags" style="margin-top:0.75rem;">
-            <span class="tag">C++</span>
-            <span class="tag amber">Windows / Xbox</span>
-          </div>
+        <div style="background:var(--surface2); border:1px solid var(--border); border-radius:10px; padding:1.1rem;">
+          <div style="font-size:0.68rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent2); margin-bottom:0.4rem;">Windows / Xbox</div>
+          <h3 style="font-size:0.95rem; color:var(--text); margin-bottom:0.5rem;">Direct3D 12</h3>
+          <p style="font-size:0.84rem; color:var(--text-muted); line-height:1.6;">API Microsoft bas niveau, équivalent de Vulkan sur l'écosystème Windows. DXR (DirectX Raytracing) a popularisé le ray tracing temps réel depuis 2018.</p>
+          <div class="tags" style="margin-top:0.6rem;"><span class="tag amber">Windows</span><span class="tag">C++</span></div>
         </div>
 
-        <div style="background:var(--surface2); border:1px solid var(--border); border-radius:10px; padding:1.25rem;">
-          <div style="font-size:0.7rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent3); margin-bottom:0.5rem;">Apple uniquement</div>
-          <h3 style="font-size:1rem; color:var(--text); margin-bottom:0.6rem;">Metal</h3>
-          <p style="font-size:0.87rem; color:var(--text-muted); line-height:1.65;">
-            API graphique d'Apple (iOS, macOS, tvOS). Remplace OpenGL sur les appareils Apple depuis 2018.
-            Conçue pour tirer parti des GPU Apple Silicon (M1/M2/M3). Très intégrée à l'écosystème Apple,
-            utilisée par des outils comme Blender, Affinity ou les jeux portés via MoltenVK.
-          </p>
-          <div class="tags" style="margin-top:0.75rem;">
-            <span class="tag">Swift / Obj-C / C++</span>
-            <span class="tag green">Apple Silicon</span>
-          </div>
+        <div style="background:var(--surface2); border:1px solid var(--border); border-radius:10px; padding:1.1rem;">
+          <div style="font-size:0.68rem; font-weight:700; letter-spacing:0.1em; text-transform:uppercase; color:var(--accent3); margin-bottom:0.4rem;">Apple Silicon</div>
+          <h3 style="font-size:0.95rem; color:var(--text); margin-bottom:0.5rem;">Metal</h3>
+          <p style="font-size:0.84rem; color:var(--text-muted); line-height:1.6;">API Apple, remplace OpenGL sur iOS/macOS depuis 2018. Très intégrée aux GPU M1/M2/M3. Utilisée par Blender, Affinity et les portages via MoltenVK.</p>
+          <div class="tags" style="margin-top:0.6rem;"><span class="tag green">Apple</span><span class="tag">Swift / C++</span></div>
         </div>
 
       </div>
     </div>
 
-    <!-- Évolutions et tendances -->
-    <div class="veille-card">
-      <h2>Tendances et évolutions suivies</h2>
-      <ul>
-        <li>
-          <strong>Le passage au bas niveau :</strong> L'industrie a progressivement migré vers des APIs à faible abstraction
-          (Vulkan, DX12, Metal) pour exploiter pleinement la puissance des GPU modernes. Cette tendance s'accompagne d'une
-          complexité accrue mais d'un gain de performance significatif sur les applications exigeantes.
-        </li>
-        <li>
-          <strong>Le ray tracing en temps réel :</strong> Introduit massivement avec NVIDIA RTX (2018) et DirectX Raytracing,
-          le ray tracing permet un éclairage photoréaliste calculé à la volée. Vulkan a suivi avec son extension
-          <code style="color:var(--accent3); font-size:0.85em;">VK_KHR_ray_tracing_pipeline</code>. Les jeux et outils de
-          visualisation architecturale l'adoptent de plus en plus.
-        </li>
-        <li>
-          <strong>GPGPU et compute shaders :</strong> Les GPU ne servent plus uniquement au rendu. Via CUDA (NVIDIA),
-          OpenCL ou les compute shaders Vulkan/WebGPU, ils sont utilisés pour l'IA, la simulation physique, le traitement
-          d'image et le son — ce qu'on appelle le GPGPU (General Purpose GPU computing).
-        </li>
-        <li>
-          <strong>wgpu et Rust :</strong> <a href="https://wgpu.rs" target="_blank" rel="noopener">wgpu</a> est une
-          implémentation de WebGPU en Rust, utilisable à la fois dans le navigateur (via WASM) et en natif.
-          Elle abstrait Vulkan, Metal et DX12 derrière une API unifiée. Son adoption dans des projets comme
-          Bevy (moteur de jeu Rust) illustre l'intérêt croissant pour des abstractions modernes et sûres.
-        </li>
-        <li>
-          <strong>Mesh shaders :</strong> Introduits par NVIDIA (Turing, 2018) et standardisés dans Vulkan et DX12,
-          les mesh shaders remplacent le pipeline vertex/geometry shader classique par un modèle plus flexible,
-          permettant une gestion plus efficace de la géométrie complexe.
-        </li>
-        <li>
-          <strong>Montée de WebGPU :</strong> Disponible dans Chrome 113 (mai 2023) et en cours d'implémentation
-          dans Firefox et Safari, WebGPU représente une rupture par rapport à WebGL. Il permet d'écrire des shaders
-          en WGSL (WebGPU Shading Language), d'accéder aux compute shaders et de s'approcher des performances natives.
-        </li>
-      </ul>
-    </div>
-
-    <!-- Sources -->
-    <div class="veille-card">
-      <h2>Sources utilisées pour cette veille</h2>
-      <ul>
-        <li>
-          <strong>Documentation officielle :</strong>
-          <a href="https://www.khronos.org/opengl/" target="_blank" rel="noopener">Khronos OpenGL</a>,
-          <a href="https://www.khronos.org/vulkan/" target="_blank" rel="noopener">Khronos Vulkan</a>,
-          <a href="https://www.w3.org/TR/webgpu/" target="_blank" rel="noopener">W3C WebGPU spec</a> —
-          la base de toute compréhension rigoureuse des APIs.
-        </li>
-        <li>
-          <strong>learnopengl.com</strong> — tutoriel de référence pour apprendre OpenGL modernes (core profile).
-          Très pédagogique, il couvre les shaders, l'éclairage, les textures, les framebuffers et plus encore.
-        </li>
-        <li>
-          <strong>vulkan-tutorial.com</strong> — équivalent de learnopengl pour Vulkan. Permet de comprendre
-          concrètement pourquoi Vulkan est verbeux et ce que ça apporte en contrôle.
-        </li>
-        <li>
-          <strong>Chaînes YouTube :</strong> TheCherno (séries OpenGL et moteur de rendu),
-          Brendan Galea (tutoriels Vulkan pas à pas), Sebastian Lague (experiments de rendu créatifs en Unity/HLSL).
-        </li>
-        <li>
-          <strong>Shadertoy</strong> (<a href="https://www.shadertoy.com" target="_blank" rel="noopener">shadertoy.com</a>) —
-          plateforme communautaire de shaders GLSL en temps réel. Permet de découvrir des techniques avancées
-          (ray marching, SDF, fluid simulation) et de les expérimenter directement dans le navigateur.
-        </li>
-        <li>
-          <strong>GPU Zen / Real-Time Rendering (livre)</strong> — références académiques sur les algorithmes
-          de rendu utilisés dans les applications commerciales.
-        </li>
-        <li>
-          <strong>SIGGRAPH papers</strong> — conférence annuelle de référence en informatique graphique.
-          Les articles présentés chaque année définissent l'état de l'art (ray tracing, neural rendering, etc.).
-        </li>
-      </ul>
-    </div>
-
-    <!-- Synthèse technique -->
-    <div class="veille-card">
-      <h2>Synthèse technique — Ce que j'ai appris</h2>
-      <ul>
-        <li>
-          <strong>Le pipeline graphique :</strong> Comprendre les étapes (vertex shader → rasterisation → fragment shader)
-          est fondamental. OpenGL m'a permis d'appréhender ce pipeline de façon concrète avant d'aborder Vulkan
-          où tout doit être configuré explicitement.
-        </li>
-        <li>
-          <strong>Les shaders :</strong> Programmes s'exécutant sur le GPU, écrits en GLSL (OpenGL), HLSL (DirectX),
-          MSL (Metal) ou WGSL (WebGPU). Ils définissent comment chaque vertex et chaque pixel sont calculés.
-          Expérimenter sur Shadertoy m'a permis de comprendre des techniques comme le ray marching sans avoir
-          besoin d'infrastructure complexe.
-        </li>
-        <li>
-          <strong>Vulkan vs OpenGL :</strong> OpenGL gère beaucoup de choses en interne (synchronisation, gestion
-          de l'état). Vulkan expose tout : le développeur crée explicitement les render passes, les descriptor sets,
-          les command buffers. C'est plus de travail mais plus de contrôle sur les performances.
-        </li>
-        <li>
-          <strong>WebGPU comme pont :</strong> WebGPU est intéressant car il permet d'appliquer des concepts proches
-          de Vulkan depuis le web. Les shaders WGSL sont structurellement similaires à ce qu'on trouve en Vulkan
-          (via SPIR-V). C'est un bon terrain d'expérimentation accessible.
-        </li>
-      </ul>
-    </div>
-
     <!-- Bilan -->
     <div class="veille-card">
-      <h2>Bilan personnel</h2>
+      <h2>Bilan</h2>
       <p>
-        Cette veille me tient à cœur parce qu'elle est au croisement de deux choses qui m'intéressent vraiment :
-        la programmation et l'image. Comprendre comment un GPU produit une image — depuis les données brutes
-        jusqu'aux pixels à l'écran — change la façon dont on regarde un rendu, un jeu, une animation.
+        Les serveurs Discord restent ma source principale — c'est là que les discussions techniques arrivent
+        en temps réel, avant les articles. Shadertoy m'a permis de passer de la lecture à la pratique :
+        expérimenter des techniques comme le ray marching (illustré dans la démo ci-dessus) sans infrastructure complexe.
       </p>
       <p style="margin-top:0.85rem;">
-        Elle m'a aussi appris à distinguer les niveaux d'abstraction : WebGL pour prototyper rapidement dans le navigateur,
-        OpenGL pour apprendre les concepts fondamentaux, Vulkan pour aller chercher la performance dans des contextes
-        professionnels. Savoir à quel niveau se placer selon le contexte est en soi une compétence utile.
-      </p>
-      <p style="margin-top:0.85rem;">
-        À terme, j'aimerais approfondir le développement de shaders créatifs et explorer le ray tracing
-        en temps réel — un domaine qui sera incontournable dans les prochaines années, que ce soit dans le jeu vidéo,
-        la visualisation architecturale ou la création artistique numérique.
+        Ce que je retiens surtout, c'est la distinction entre les niveaux d'abstraction : WebGL pour prototyper
+        rapidement dans le navigateur, OpenGL pour apprendre les fondamentaux, Vulkan quand la performance
+        prime. Savoir à quel niveau se placer selon le contexte, c'est en soi une compétence.
       </p>
     </div>
 
@@ -290,5 +174,173 @@
   <footer>
     Portfolio BTS SIO SLAM — Ismael Ounacer — Lycée Gustave Eiffel — Session <span>2026</span>
   </footer>
+
+  <script>
+    (function () {
+      const canvas = document.getElementById('shader-canvas');
+      const gl = canvas.getContext('webgl');
+      if (!gl) {
+        canvas.style.display = 'none';
+        return;
+      }
+
+      const VS = `
+        attribute vec2 a_pos;
+        void main() { gl_Position = vec4(a_pos, 0.0, 1.0); }
+      `;
+
+      const FS = `
+        precision highp float;
+        uniform float u_time;
+        uniform vec2  u_res;
+
+        // Signed distance — sphere at origin radius 1
+        float sdSphere(vec3 p) { return length(p) - 1.0; }
+
+        // Soft shadow factor along ray from p toward light
+        float softShadow(vec3 ro, vec3 rd) {
+          float res = 1.0;
+          float t = 0.05;
+          for (int i = 0; i < 24; i++) {
+            float h = sdSphere(ro + rd * t);
+            res = min(res, 8.0 * h / t);
+            t += clamp(h, 0.01, 0.2);
+            if (t > 3.0) break;
+          }
+          return clamp(res, 0.0, 1.0);
+        }
+
+        vec3 calcNormal(vec3 p) {
+          vec2 e = vec2(0.001, 0.0);
+          return normalize(vec3(
+            sdSphere(p + e.xyy) - sdSphere(p - e.xyy),
+            sdSphere(p + e.yxy) - sdSphere(p - e.yxy),
+            sdSphere(p + e.yyx) - sdSphere(p - e.yyx)
+          ));
+        }
+
+        void main() {
+          vec2 uv = (gl_FragCoord.xy - u_res * 0.5) / u_res.y;
+
+          // Camera
+          vec3 ro = vec3(0.0, 0.0, 3.0);
+          vec3 rd = normalize(vec3(uv, -1.6));
+
+          // Background — dark gradient with subtle purple tint
+          float bgGrad = smoothstep(-0.6, 0.6, uv.y);
+          vec3 col = mix(vec3(0.04, 0.03, 0.08), vec3(0.08, 0.06, 0.14), bgGrad);
+
+          // Faint grid in background
+          vec2 grid = abs(fract(uv * 8.0) - 0.5);
+          float gridLine = min(grid.x, grid.y);
+          col += 0.015 * (1.0 - smoothstep(0.0, 0.06, gridLine));
+
+          // Ray march
+          float t = 0.0;
+          bool hit = false;
+          for (int i = 0; i < 80; i++) {
+            float d = sdSphere(ro + rd * t);
+            if (d < 0.0005) { hit = true; break; }
+            if (t > 10.0)   { break; }
+            t += d;
+          }
+
+          if (hit) {
+            vec3 p  = ro + rd * t;
+            vec3 n  = calcNormal(p);
+
+            // Animated key light (orbits)
+            float lAngle = u_time * 0.6;
+            vec3 lPos = vec3(sin(lAngle) * 2.5, 1.8, cos(lAngle) * 2.5 + 1.5);
+            vec3 lDir = normalize(lPos - p);
+
+            // Fill light (static, opposite side)
+            vec3 fDir = normalize(vec3(-1.4, -0.5, 1.0));
+
+            float diff  = max(dot(n, lDir), 0.0);
+            float fill  = max(dot(n, fDir), 0.0) * 0.18;
+            float amb   = 0.06;
+
+            // Specular (Blinn-Phong)
+            vec3 viewDir = normalize(ro - p);
+            vec3 h       = normalize(lDir + viewDir);
+            float spec   = pow(max(dot(n, h), 0.0), 96.0);
+
+            // Fresnel rim glow
+            float fresnel = pow(1.0 - max(dot(n, viewDir), 0.0), 3.5);
+
+            // Iridescent base color — shifts subtly with normal and time
+            float hueShift = dot(n, vec3(0.577)) * 0.5 + 0.5 + u_time * 0.12;
+            vec3 baseA = vec3(0.38, 0.18, 0.82); // purple
+            vec3 baseB = vec3(0.15, 0.55, 0.90); // cyan
+            vec3 base  = mix(baseA, baseB, 0.5 + 0.5 * sin(hueShift * 3.14159));
+
+            float shadow = softShadow(p + n * 0.002, lDir);
+
+            col  = base * (amb + fill + diff * shadow);
+            col += vec3(1.0) * spec * shadow * 0.9;
+            col += base * fresnel * 0.55;
+
+            // Thin outline / depth darkening at silhouette
+            col *= 1.0 - fresnel * 0.3;
+          }
+
+          // Vignette
+          float vig = 1.0 - dot(uv * 0.7, uv * 0.7);
+          col *= smoothstep(0.0, 0.6, vig);
+
+          // Gamma
+          col = pow(clamp(col, 0.0, 1.0), vec3(0.4545));
+
+          gl_FragColor = vec4(col, 1.0);
+        }
+      `;
+
+      function compile(type, src) {
+        const s = gl.createShader(type);
+        gl.shaderSource(s, src);
+        gl.compileShader(s);
+        return s;
+      }
+
+      const prog = gl.createProgram();
+      gl.attachShader(prog, compile(gl.VERTEX_SHADER, VS));
+      gl.attachShader(prog, compile(gl.FRAGMENT_SHADER, FS));
+      gl.linkProgram(prog);
+      gl.useProgram(prog);
+
+      // Full-screen quad
+      const buf = gl.createBuffer();
+      gl.bindBuffer(gl.ARRAY_BUFFER, buf);
+      gl.bufferData(gl.ARRAY_BUFFER, new Float32Array([-1,-1, 1,-1, -1,1, 1,1]), gl.STATIC_DRAW);
+      const loc = gl.getAttribLocation(prog, 'a_pos');
+      gl.enableVertexAttribArray(loc);
+      gl.vertexAttribPointer(loc, 2, gl.FLOAT, false, 0, 0);
+
+      const uTime = gl.getUniformLocation(prog, 'u_time');
+      const uRes  = gl.getUniformLocation(prog, 'u_res');
+
+      function resize() {
+        const dpr = Math.min(window.devicePixelRatio || 1, 2);
+        canvas.width  = canvas.clientWidth  * dpr;
+        canvas.height = canvas.clientHeight * dpr;
+        gl.viewport(0, 0, canvas.width, canvas.height);
+      }
+
+      resize();
+      window.addEventListener('resize', resize);
+
+      let start = null;
+      function frame(ts) {
+        if (!start) start = ts;
+        const t = (ts - start) / 1000;
+        gl.uniform1f(uTime, t);
+        gl.uniform2f(uRes, canvas.width, canvas.height);
+        gl.drawArrays(gl.TRIANGLE_STRIP, 0, 4);
+        requestAnimationFrame(frame);
+      }
+      requestAnimationFrame(frame);
+    })();
+  </script>
 </body>
 </html>
