@@ -110,6 +110,82 @@
       </div>
     </div>
 
+    <!-- Find -->
+    <div class="project-card" style="margin-bottom:2.5rem;">
+      <div style="padding:2rem;">
+        <div class="project-type">Stage Année 2 · Application mobile · Flutter &amp; Firebase</div>
+        <h3 style="font-size:1.4rem; font-weight:800; color:var(--text); margin-bottom:1rem;">Find — Découverte d'activités en temps réel</h3>
+        <div class="grid-2" style="gap:2rem; align-items:start;">
+          <div>
+            <p style="color:var(--text-muted); line-height:1.75; margin-bottom:1rem;">
+              Application mobile multiplateforme (Android &amp; iOS) développée avec un camarade durant le dernier stage.
+              <strong style="color:var(--text)">Find</strong> permet à ses utilisateurs de découvrir des activités organisées
+              près d'eux, d'y participer, de créer les leurs et de discuter avec les autres participants —
+              le tout centré sur les rencontres en personne.
+            </p>
+            <p style="color:var(--text-muted); line-height:1.75; margin-bottom:1rem;">
+              L'application utilise la géolocalisation pour afficher les activités à proximité,
+              avec des filtres avancés (type, distance, date, capacité). Les utilisateurs disposent
+              d'un profil, d'un historique de leurs participations, d'un système de chat par activité
+              et d'un mécanisme de signalement.
+            </p>
+            <p style="color:var(--text-muted); line-height:1.75; margin-bottom:1rem;">
+              Le backend repose entièrement sur <strong style="color:var(--text)">Firebase</strong> :
+              Firestore pour les données, Firebase Auth pour l'authentification,
+              Firebase Storage pour les médias, et Cloud Functions v2 pour les tâches planifiées
+              (expiration automatique des activités, recalcul des scores de popularité).
+            </p>
+            <div class="tags" style="margin-top:1.25rem;">
+              <span class="tag">Flutter / Dart</span>
+              <span class="tag">Firebase</span>
+              <span class="tag">Firestore</span>
+              <span class="tag">Cloud Functions</span>
+              <span class="tag">Géolocalisation</span>
+              <span class="tag purple">flutter_bloc / Cubit</span>
+              <span class="tag amber">Stage · En binôme</span>
+            </div>
+          </div>
+          <div>
+            <div style="background:var(--surface2); border:1px solid var(--border); border-radius:10px; padding:1.25rem; margin-bottom:1rem;">
+              <h4 style="font-size:0.82rem; font-weight:700; color:var(--accent3); margin-bottom:0.85rem; text-transform:uppercase; letter-spacing:0.06em;">Architecture &amp; fonctionnalités</h4>
+              <ul style="padding-left:1.1rem; color:var(--text-muted); font-size:0.87rem; line-height:1.8;">
+                <li>Pattern <strong style="color:var(--text)">MVVM</strong> strict : views → viewmodels → services → models</li>
+                <li>Gestion d'état par <strong style="color:var(--text)">Cubit</strong> (flutter_bloc)</li>
+                <li>Navigation déclarative via <strong style="color:var(--text)">GoRouter</strong></li>
+                <li>Injection de dépendances via <strong style="color:var(--text)">GetIt</strong></li>
+                <li>11 services Firebase encapsulés dans la couche <code style="color:var(--accent3); font-size:0.85em;">services/</code></li>
+                <li>Requêtes géospatiales Firestore avec GeoFlutterFire Plus</li>
+                <li>Cloud Function d'expiration planifiée (toutes les 5 min)</li>
+                <li>Tests unitaires et d'intégration</li>
+              </ul>
+            </div>
+            <div style="background:var(--surface2); border:1px solid var(--border); border-radius:10px; padding:1rem;">
+              <h4 style="font-size:0.82rem; font-weight:700; color:var(--accent3); margin-bottom:0.6rem; text-transform:uppercase; letter-spacing:0.06em;">Modules du projet</h4>
+              <div class="tags">
+                <span class="tag">Authentification</span>
+                <span class="tag">Profil utilisateur</span>
+                <span class="tag">Découverte d'activités</span>
+                <span class="tag">Géolocalisation</span>
+                <span class="tag">Création d'activité</span>
+                <span class="tag">Chat par activité</span>
+                <span class="tag">Historique</span>
+                <span class="tag">Signalement</span>
+                <span class="tag">Quotas mensuels</span>
+                <span class="tag">Cloud Functions</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="project-comps" style="margin-top:1.5rem;">
+          <span class="comp-chip">Présence en ligne</span>
+          <span class="comp-chip">Répondre aux incidents</span>
+          <span class="comp-chip">Mode projet</span>
+          <span class="comp-chip">Mettre à disposition un service</span>
+          <span class="comp-chip">Développement professionnel</span>
+        </div>
+      </div>
+    </div>
+
     <!-- API Aux Claviers Citoyens -->
     <div class="project-card" style="margin-bottom:2.5rem;">
       <div style="padding:2rem;">

@@ -70,6 +70,15 @@
             <td><button class="x-btn" data-bs-toggle="modal" data-bs-target="#modal-eklekktik-devpro">X</button></td>
           </tr>
           <tr>
+            <td>Find — App mobile</td>
+            <td></td>
+            <td><button class="x-btn" data-bs-toggle="modal" data-bs-target="#modal-find-incidents">X</button></td>
+            <td><button class="x-btn" data-bs-toggle="modal" data-bs-target="#modal-find-presence">X</button></td>
+            <td><button class="x-btn" data-bs-toggle="modal" data-bs-target="#modal-find-projet">X</button></td>
+            <td><button class="x-btn" data-bs-toggle="modal" data-bs-target="#modal-find-service">X</button></td>
+            <td><button class="x-btn" data-bs-toggle="modal" data-bs-target="#modal-find-devpro">X</button></td>
+          </tr>
+          <tr>
             <td>API Aux Claviers Citoyens</td>
             <td></td>
             <td></td>
@@ -318,6 +327,115 @@
           <div class="row g-2">
             <div class="col-md-6"><img src="img/eklekktik_3.png" alt="Eklekktik" class="img-fluid rounded"></div>
           </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Find -->
+  <div class="modal fade" id="modal-find-incidents" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Find — Répondre aux incidents et demandes</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>Le développement en binôme de Find a impliqué une gestion continue des retours, des anomalies et des demandes d'évolution tout au long du stage.</p>
+          <ul>
+            <li>Collecte et suivi des retours fonctionnels sur les écrans développés (auth, profil, activités, chat)</li>
+            <li>Diagnostic et correction d'anomalies liées à la synchronisation Firestore et à la géolocalisation</li>
+            <li>Traitement des demandes d'évolution sur le cycle de vie des activités (expiration, historique, quotas)</li>
+            <li>Coordination avec le binôme pour prioriser et résoudre les incidents en cours de développement</li>
+            <li>Scripts de réparation de données (<code>repairActivityLifecycleAndCounters.ts</code>) pour corriger des incohérences en base</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modal-find-presence" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Find — Développer la présence en ligne</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>Find est le service numérique principal de l'organisation — une application mobile publiée sur Android et iOS, conçue pour maximiser la visibilité et l'engagement des utilisateurs.</p>
+          <ul>
+            <li>Développement de l'interface utilisateur mobile (Flutter) valorisant l'image du service</li>
+            <li>Mise en place de Firebase Auth pour sécuriser l'accès et gérer les identités numériques des utilisateurs</li>
+            <li>Intégration de Firebase Storage pour les photos de profil et médias associés aux activités</li>
+            <li>Respect des obligations RGPD : gestion des données personnelles (localisation, profil) avec consentement explicite</li>
+            <li>Conception d'une expérience utilisateur favorisant l'engagement et la fidélisation</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modal-find-projet" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Find — Travailler en mode projet</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>Le projet Find a été conduit en binôme selon une organisation rigoureuse, avec une architecture définie dès le départ et une roadmap formalisée.</p>
+          <ul>
+            <li>Définition et respect d'une architecture MVVM stricte (<code>views → viewmodels → services → models</code>) documentée dans un MANIFESTO</li>
+            <li>Planification des fonctionnalités par phases (MVP → stabilisation → enrichissement) via une roadmap détaillée</li>
+            <li>Répartition des tâches entre les deux développeurs et coordination quotidienne</li>
+            <li>Rédaction de comptes rendus de stage (CR_S1, CR_S2) documentant l'avancement et les décisions techniques</li>
+            <li>Suivi de version via Git / GitHub, gestion de branches par fonctionnalité</li>
+            <li>Documentation technique complète dans le dossier <code>doc/</code> (MANIFESTO, roadmap, onboarding développeur)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modal-find-service" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Find — Mettre à disposition un service</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>Le déploiement de Find repose sur Firebase (plan Blaze, région europe-west1) et inclut des Cloud Functions déployées en production.</p>
+          <ul>
+            <li>Déploiement des règles Firestore et des indexes (<code>firebase deploy --only firestore</code>)</li>
+            <li>Déploiement des Cloud Functions v2 : <code>expireActivities</code> (toutes les 5 min) et <code>maintainActivityPopularity</code> (toutes les 15 min)</li>
+            <li>Rédaction et exécution de tests unitaires et d'intégration Flutter (<code>test/</code>)</li>
+            <li>Mise en place des règles de sécurité Firebase Storage pour protéger les médias</li>
+            <li>Vérification de la conformité des données en production avec des scripts de réparation</li>
+            <li>Build de l'application en mode release pour Android</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal fade" id="modal-find-devpro" tabindex="-1">
+    <div class="modal-dialog modal-lg">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Find — Développement professionnel</h5>
+          <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <p>Ce stage a représenté une montée en compétences significative sur un stack moderne (Flutter, Firebase, architecture MVVM) dans un contexte de développement en équipe.</p>
+          <ul>
+            <li>Apprentissage et mise en pratique de Flutter/Dart sur un projet complet multiplateforme</li>
+            <li>Maîtrise de Firebase (Firestore, Auth, Storage, Cloud Functions) en conditions réelles</li>
+            <li>Application du pattern MVVM et des principes de clean architecture</li>
+            <li>Pratique de la gestion d'état avec flutter_bloc (Cubit) et de l'injection de dépendances (GetIt)</li>
+            <li>Développement de l'autonomie technique et de la capacité à travailler en binôme sur un projet ambitieux</li>
+            <li>Rédaction de documentation technique et de comptes rendus professionnels</li>
+          </ul>
         </div>
       </div>
     </div>
