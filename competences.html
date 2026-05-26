@@ -127,7 +127,7 @@
     }
 
     /* ── Comp cards ─────────────────────────────────── */
-    .comp-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 1rem; }
+    .comp-cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(340px, 1fr)); gap: 1.25rem; }
     .comp-card {
       background: var(--surface);
       border: 1px solid var(--border);
@@ -142,18 +142,52 @@
       letter-spacing: 0.12em;
       text-transform: uppercase;
       color: var(--accent);
-      margin-bottom: 0.5rem;
+      margin-bottom: 0.4rem;
     }
     .comp-card h3 {
       font-size: 0.95rem;
       font-weight: 700;
       color: var(--text);
-      margin-bottom: 0.5rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.6rem;
+      border-bottom: 1px solid var(--border);
     }
-    .comp-card p {
-      font-size: 0.84rem;
-      color: var(--text-muted);
-      line-height: 1.6;
+    /* Sub-competence rows */
+    .sub-comp-list { list-style: none; padding: 0; margin: 0; }
+    .sub-comp-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.6rem;
+      padding: 0.55rem 0;
+      border-bottom: 1px solid rgba(255,255,255,0.04);
+      font-size: 0.81rem;
+    }
+    .sub-comp-item:last-child { border-bottom: none; }
+    .sub-comp-dot {
+      flex-shrink: 0;
+      width: 6px;
+      height: 6px;
+      border-radius: 50%;
+      background: var(--accent);
+      margin-top: 0.35rem;
+    }
+    .sub-comp-text { flex: 1; color: var(--text-muted); line-height: 1.5; }
+    .sub-comp-proj {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.3rem;
+      margin-top: 0.3rem;
+    }
+    .proj-tag {
+      display: inline-block;
+      font-size: 0.65rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      padding: 0.15rem 0.5rem;
+      border-radius: 4px;
+      background: rgba(167,139,250,0.15);
+      color: var(--accent);
+      border: 1px solid rgba(167,139,250,0.25);
     }
 
     /* ── PDF embed ──────────────────────────────────── */
@@ -270,44 +304,198 @@
     <!-- Comp cards -->
     <div class="section-head">
       <h2>Les 6 compétences du Bloc 1</h2>
+      <p>Sous-compétences validées et réalisations associées</p>
     </div>
     <div class="comp-cards" style="margin-bottom:3rem;">
+
+      <!-- B1.1 -->
       <div class="comp-card">
         <div class="comp-card-id">B1.1</div>
         <h3>Gérer le patrimoine informatique</h3>
-        <p>Recenser les ressources numériques, gérer les habilitations, sauvegardes et continuité de service.</p>
-        <div class="tags" style="margin-top:0.75rem;"><span class="tag purple">Find</span></div>
+        <ul class="sub-comp-list">
+          <li class="sub-comp-item">
+            <span class="sub-comp-dot"></span>
+            <div class="sub-comp-text">
+              Recenser et identifier les ressources numériques
+              <div class="sub-comp-proj"><span class="proj-tag">Find</span></div>
+            </div>
+          </li>
+          <li class="sub-comp-item">
+            <span class="sub-comp-dot"></span>
+            <div class="sub-comp-text">
+              Mettre en place et vérifier les niveaux d'habilitation
+              <div class="sub-comp-proj"><span class="proj-tag">Find</span></div>
+            </div>
+          </li>
+          <li class="sub-comp-item">
+            <span class="sub-comp-dot"></span>
+            <div class="sub-comp-text">
+              Vérifier les conditions de la continuité d'un service
+              <div class="sub-comp-proj"><span class="proj-tag">Find</span></div>
+            </div>
+          </li>
+          <li class="sub-comp-item">
+            <span class="sub-comp-dot"></span>
+            <div class="sub-comp-text">
+              Exploiter des référentiels, normes et standards
+              <div class="sub-comp-proj"><span class="proj-tag">Find</span></div>
+            </div>
+          </li>
+        </ul>
       </div>
+
+      <!-- B1.2 -->
       <div class="comp-card">
         <div class="comp-card-id">B1.2</div>
         <h3>Répondre aux incidents et demandes</h3>
-        <p>Collecter, suivre et traiter des demandes d'assistance ou d'évolution sur les services applicatifs.</p>
-        <div class="tags" style="margin-top:0.75rem;"><span class="tag purple">Eklekktik</span><span class="tag purple">Find</span></div>
+        <ul class="sub-comp-list">
+          <li class="sub-comp-item">
+            <span class="sub-comp-dot"></span>
+            <div class="sub-comp-text">
+              Collecter, suivre et orienter des demandes
+              <div class="sub-comp-proj"><span class="proj-tag">Eklekktik</span><span class="proj-tag">Find</span></div>
+            </div>
+          </li>
+          <li class="sub-comp-item">
+            <span class="sub-comp-dot"></span>
+            <div class="sub-comp-text">
+              Traiter des demandes concernant les applications
+              <div class="sub-comp-proj"><span class="proj-tag">Eklekktik</span><span class="proj-tag">Find</span></div>
+            </div>
+          </li>
+          <li class="sub-comp-item">
+            <span class="sub-comp-dot"></span>
+            <div class="sub-comp-text">
+              Traiter des demandes concernant les services réseau et système
+              <div class="sub-comp-proj"><span class="proj-tag">Find</span></div>
+            </div>
+          </li>
+        </ul>
       </div>
+
+      <!-- B1.3 -->
       <div class="comp-card">
         <div class="comp-card-id">B1.3</div>
         <h3>Développer la présence en ligne</h3>
-        <p>Valoriser l'image de l'organisation, référencer les services, faire évoluer un site web.</p>
-        <div class="tags" style="margin-top:0.75rem;"><span class="tag purple">M2L</span><span class="tag purple">Eklekktik</span><span class="tag purple">Find</span></div>
+        <ul class="sub-comp-list">
+          <li class="sub-comp-item">
+            <span class="sub-comp-dot"></span>
+            <div class="sub-comp-text">
+              Participer à la valorisation de l'image sur les médias numériques
+              <div class="sub-comp-proj"><span class="proj-tag">M2L</span><span class="proj-tag">Eklekktik</span><span class="proj-tag">Find</span></div>
+            </div>
+          </li>
+          <li class="sub-comp-item">
+            <span class="sub-comp-dot"></span>
+            <div class="sub-comp-text">
+              Participer à l'évolution d'un site Web exploitant les données
+              <div class="sub-comp-proj"><span class="proj-tag">M2L</span></div>
+            </div>
+          </li>
+          <li class="sub-comp-item">
+            <span class="sub-comp-dot"></span>
+            <div class="sub-comp-text">
+              Référencer les services en ligne et mesurer leur visibilité
+              <div class="sub-comp-proj"><span class="proj-tag">M2L</span><span class="proj-tag">Find</span></div>
+            </div>
+          </li>
+        </ul>
       </div>
+
+      <!-- B1.4 -->
       <div class="comp-card">
         <div class="comp-card-id">B1.4</div>
         <h3>Travailler en mode projet</h3>
-        <p>Analyser les objectifs, planifier, évaluer les indicateurs de suivi et analyser les écarts.</p>
-        <div class="tags" style="margin-top:0.75rem;"><span class="tag purple">Tous les projets</span></div>
+        <ul class="sub-comp-list">
+          <li class="sub-comp-item">
+            <span class="sub-comp-dot"></span>
+            <div class="sub-comp-text">
+              Analyser les objectifs et modalités d'organisation
+              <div class="sub-comp-proj"><span class="proj-tag">M2L</span><span class="proj-tag">Find</span></div>
+            </div>
+          </li>
+          <li class="sub-comp-item">
+            <span class="sub-comp-dot"></span>
+            <div class="sub-comp-text">
+              Planifier les activités
+              <div class="sub-comp-proj"><span class="proj-tag">Eklekktik</span><span class="proj-tag">Find</span></div>
+            </div>
+          </li>
+          <li class="sub-comp-item">
+            <span class="sub-comp-dot"></span>
+            <div class="sub-comp-text">
+              Évaluer les indicateurs de suivi et analyser les écarts
+              <div class="sub-comp-proj"><span class="proj-tag">Find</span><span class="proj-tag">API ACC</span></div>
+            </div>
+          </li>
+        </ul>
       </div>
+
+      <!-- B1.5 -->
       <div class="comp-card">
         <div class="comp-card-id">B1.5</div>
         <h3>Mettre à disposition un service</h3>
-        <p>Tests d'intégration, déploiement, accompagnement des utilisateurs dans la prise en main.</p>
-        <div class="tags" style="margin-top:0.75rem;"><span class="tag purple">M2L</span><span class="tag purple">Find</span></div>
+        <ul class="sub-comp-list">
+          <li class="sub-comp-item">
+            <span class="sub-comp-dot"></span>
+            <div class="sub-comp-text">
+              Réaliser les tests d'intégration et d'acceptation
+              <div class="sub-comp-proj"><span class="proj-tag">M2L</span><span class="proj-tag">Find</span></div>
+            </div>
+          </li>
+          <li class="sub-comp-item">
+            <span class="sub-comp-dot"></span>
+            <div class="sub-comp-text">
+              Déployer un service
+              <div class="sub-comp-proj"><span class="proj-tag">M2L</span><span class="proj-tag">API ACC</span><span class="proj-tag">Find</span></div>
+            </div>
+          </li>
+          <li class="sub-comp-item">
+            <span class="sub-comp-dot"></span>
+            <div class="sub-comp-text">
+              Accompagner les utilisateurs dans la mise en place d'un service
+              <div class="sub-comp-proj"><span class="proj-tag">Eklekktik</span><span class="proj-tag">M2L</span></div>
+            </div>
+          </li>
+        </ul>
       </div>
+
+      <!-- B1.6 -->
       <div class="comp-card">
         <div class="comp-card-id">B1.6</div>
         <h3>Organiser son développement professionnel</h3>
-        <p>Veille technologique régulière, environnement d'apprentissage, identité professionnelle.</p>
-        <div class="tags" style="margin-top:0.75rem;"><span class="tag purple">Eklekktik</span><span class="tag purple">Find</span><span class="tag purple">Veille APIs</span></div>
+        <ul class="sub-comp-list">
+          <li class="sub-comp-item">
+            <span class="sub-comp-dot"></span>
+            <div class="sub-comp-text">
+              Mettre en place son environnement d'apprentissage personnel
+              <div class="sub-comp-proj"><span class="proj-tag">Eklekktik</span><span class="proj-tag">Find</span></div>
+            </div>
+          </li>
+          <li class="sub-comp-item">
+            <span class="sub-comp-dot"></span>
+            <div class="sub-comp-text">
+              Mettre en œuvre des outils et stratégies de veille informationnelle
+              <div class="sub-comp-proj"><span class="proj-tag">Veille APIs</span></div>
+            </div>
+          </li>
+          <li class="sub-comp-item">
+            <span class="sub-comp-dot"></span>
+            <div class="sub-comp-text">
+              Gérer son identité professionnelle
+              <div class="sub-comp-proj"><span class="proj-tag">Portfolio</span><span class="proj-tag">GitHub</span></div>
+            </div>
+          </li>
+          <li class="sub-comp-item">
+            <span class="sub-comp-dot"></span>
+            <div class="sub-comp-text">
+              Développer son projet professionnel
+              <div class="sub-comp-proj"><span class="proj-tag">Find</span><span class="proj-tag">Veille APIs</span></div>
+            </div>
+          </li>
+        </ul>
       </div>
+
     </div>
   </main>
 
