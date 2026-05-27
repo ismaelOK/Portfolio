@@ -172,11 +172,19 @@
       margin-top: 0.35rem;
     }
     .sub-comp-text { flex: 1; color: var(--text-muted); line-height: 1.5; }
+    .sub-comp-justif {
+      font-size: 0.75rem;
+      color: var(--text-muted);
+      font-style: italic;
+      margin-top: 0.25rem;
+      opacity: 0.8;
+      line-height: 1.45;
+    }
     .sub-comp-proj {
       display: flex;
       flex-wrap: wrap;
       gap: 0.3rem;
-      margin-top: 0.3rem;
+      margin-top: 0.35rem;
     }
     .proj-tag {
       display: inline-block;
@@ -317,6 +325,7 @@
             <span class="sub-comp-dot"></span>
             <div class="sub-comp-text">
               Recenser et identifier les ressources numériques
+              <div class="sub-comp-justif">Recensement des collections Firestore (users, activities, participations, reports), identification et documentation des services Firebase utilisés (Firestore, Auth, Storage, Cloud Functions v2) dans le projet <em>find-b5b09</em>.</div>
               <div class="sub-comp-proj"><span class="proj-tag">Find</span></div>
             </div>
           </li>
@@ -324,6 +333,7 @@
             <span class="sub-comp-dot"></span>
             <div class="sub-comp-text">
               Mettre en place et vérifier les niveaux d'habilitation
+              <div class="sub-comp-justif">Définition des règles de sécurité Firestore par rôle (utilisateur authentifié, propriétaire d'activité, administrateur). Firebase Auth comme gestionnaire d'identités — contrôle de l'accès à toutes les ressources.</div>
               <div class="sub-comp-proj"><span class="proj-tag">Find</span></div>
             </div>
           </li>
@@ -331,6 +341,7 @@
             <span class="sub-comp-dot"></span>
             <div class="sub-comp-text">
               Vérifier les conditions de la continuité d'un service
+              <div class="sub-comp-justif">Cloud Functions v2 planifiées (<code>expireActivities</code> toutes les 5 min, <code>maintainActivityPopularity</code> toutes les 15 min) assurant la cohérence du service en continu. Scripts de réparation de données pour rétablir l'intégrité en cas d'incohérence.</div>
               <div class="sub-comp-proj"><span class="proj-tag">Find</span></div>
             </div>
           </li>
@@ -338,6 +349,7 @@
             <span class="sub-comp-dot"></span>
             <div class="sub-comp-text">
               Exploiter des référentiels, normes et standards
+              <div class="sub-comp-justif">Application stricte du pattern MVVM documenté dans le MANIFESTO du projet. Respect de la documentation officielle Firebase Security Rules et des conventions Dart/Flutter.</div>
               <div class="sub-comp-proj"><span class="proj-tag">Find</span></div>
             </div>
           </li>
@@ -353,6 +365,7 @@
             <span class="sub-comp-dot"></span>
             <div class="sub-comp-text">
               Collecter, suivre et orienter des demandes
+              <div class="sub-comp-justif">Eklekktik : collecte et priorisation des retours fonctionnels des membres de l'association au fil du stage. Find : suivi des anomalies et demandes d'évolution gérées en binôme via GitHub issues et réunions quotidiennes.</div>
               <div class="sub-comp-proj"><span class="proj-tag">Eklekktik</span><span class="proj-tag">Find</span></div>
             </div>
           </li>
@@ -360,6 +373,7 @@
             <span class="sub-comp-dot"></span>
             <div class="sub-comp-text">
               Traiter des demandes concernant les applications
+              <div class="sub-comp-justif">Eklekktik : diagnostic et correction des anomalies signalées sur l'application Android, validation avec les responsables. Find : résolution de bugs liés à la synchronisation Firestore, aux filtres de géolocalisation et au cycle de vie des activités.</div>
               <div class="sub-comp-proj"><span class="proj-tag">Eklekktik</span><span class="proj-tag">Find</span></div>
             </div>
           </li>
@@ -367,6 +381,7 @@
             <span class="sub-comp-dot"></span>
             <div class="sub-comp-text">
               Traiter des demandes concernant les services réseau et système
+              <div class="sub-comp-justif">Find : gestion des erreurs de connectivité Firebase, configuration des indexes Firestore composites pour les requêtes géospatiales (GeoFlutterFire Plus), diagnostics de latence sur les requêtes temps réel.</div>
               <div class="sub-comp-proj"><span class="proj-tag">Find</span></div>
             </div>
           </li>
@@ -382,6 +397,7 @@
             <span class="sub-comp-dot"></span>
             <div class="sub-comp-text">
               Participer à la valorisation de l'image sur les médias numériques
+              <div class="sub-comp-justif">M2L : développement de la vitrine numérique de l'organisation. Eklekktik : application mobile principale de l'association, support de communication numérique. Find : application multiplateforme (Android &amp; iOS) exposant le service de l'organisation au public.</div>
               <div class="sub-comp-proj"><span class="proj-tag">M2L</span><span class="proj-tag">Eklekktik</span><span class="proj-tag">Find</span></div>
             </div>
           </li>
@@ -389,6 +405,7 @@
             <span class="sub-comp-dot"></span>
             <div class="sub-comp-text">
               Participer à l'évolution d'un site Web exploitant les données
+              <div class="sub-comp-justif">Développement du module de gestion des formations sur le site M2L existant : ajout des interfaces responsable/utilisateur, intégration à la base MySQL, gestion des demandes d'inscription.</div>
               <div class="sub-comp-proj"><span class="proj-tag">M2L</span></div>
             </div>
           </li>
@@ -396,6 +413,7 @@
             <span class="sub-comp-dot"></span>
             <div class="sub-comp-text">
               Référencer les services en ligne et mesurer leur visibilité
+              <div class="sub-comp-justif">M2L : mise en ligne et référencement des formations sur la plateforme, interface permettant aux responsables de consulter et gérer les inscriptions. Find : publication de l'application et référencement des activités par géolocalisation.</div>
               <div class="sub-comp-proj"><span class="proj-tag">M2L</span><span class="proj-tag">Find</span></div>
             </div>
           </li>
@@ -411,6 +429,7 @@
             <span class="sub-comp-dot"></span>
             <div class="sub-comp-text">
               Analyser les objectifs et modalités d'organisation
+              <div class="sub-comp-justif">M2L : analyse du cahier des charges fourni, identification du périmètre du module formations en groupe de 3. Find : rédaction du MANIFESTO d'architecture MVVM, définition de la roadmap par phases (MVP → stabilisation → enrichissement).</div>
               <div class="sub-comp-proj"><span class="proj-tag">M2L</span><span class="proj-tag">Find</span></div>
             </div>
           </li>
@@ -418,6 +437,7 @@
             <span class="sub-comp-dot"></span>
             <div class="sub-comp-text">
               Planifier les activités
+              <div class="sub-comp-justif">Eklekktik : planification des sprints de développement mobile en autonomie durant le stage. Find : roadmap documentée par phases, répartition des fonctionnalités entre les deux développeurs, suivi de l'avancement hebdomadaire.</div>
               <div class="sub-comp-proj"><span class="proj-tag">Eklekktik</span><span class="proj-tag">Find</span></div>
             </div>
           </li>
@@ -425,6 +445,7 @@
             <span class="sub-comp-dot"></span>
             <div class="sub-comp-text">
               Évaluer les indicateurs de suivi et analyser les écarts
+              <div class="sub-comp-justif">Find : rédaction de comptes rendus de stage (CR_S1, CR_S2) documentant l'avancement, les difficultés rencontrées et les ajustements apportés. API ACC : suivi de l'avancement du module d'authentification et documentation des endpoints livrés.</div>
               <div class="sub-comp-proj"><span class="proj-tag">Find</span><span class="proj-tag">API ACC</span></div>
             </div>
           </li>
@@ -440,6 +461,7 @@
             <span class="sub-comp-dot"></span>
             <div class="sub-comp-text">
               Réaliser les tests d'intégration et d'acceptation
+              <div class="sub-comp-justif">M2L : tests fonctionnels du module formations (acceptation/refus d'inscriptions, vérification des droits par rôle). Find : tests unitaires et d'intégration Flutter, validation des scénarios utilisateur bout en bout.</div>
               <div class="sub-comp-proj"><span class="proj-tag">M2L</span><span class="proj-tag">Find</span></div>
             </div>
           </li>
@@ -447,6 +469,7 @@
             <span class="sub-comp-dot"></span>
             <div class="sub-comp-text">
               Déployer un service
+              <div class="sub-comp-justif">M2L : déploiement du module sur l'environnement de production du lycée. API ACC : mise en production des endpoints d'authentification (JWT, RBAC). Find : déploiement Firebase production (plan Blaze, région europe-west1) avec Cloud Functions v2 et build release Android.</div>
               <div class="sub-comp-proj"><span class="proj-tag">M2L</span><span class="proj-tag">API ACC</span><span class="proj-tag">Find</span></div>
             </div>
           </li>
@@ -454,6 +477,7 @@
             <span class="sub-comp-dot"></span>
             <div class="sub-comp-text">
               Accompagner les utilisateurs dans la mise en place d'un service
+              <div class="sub-comp-justif">Eklekktik : formation des membres de l'association à l'utilisation de l'application mobile livrée. M2L : prise en main du module par les responsables de formation — explication des interfaces de gestion des inscriptions.</div>
               <div class="sub-comp-proj"><span class="proj-tag">Eklekktik</span><span class="proj-tag">M2L</span></div>
             </div>
           </li>
@@ -469,6 +493,7 @@
             <span class="sub-comp-dot"></span>
             <div class="sub-comp-text">
               Mettre en place son environnement d'apprentissage personnel
+              <div class="sub-comp-justif">Eklekktik : configuration de l'environnement Android Studio / Java en autonomie pour le développement mobile. Find : mise en place complète de l'environnement Flutter/Dart/Firebase depuis zéro sur un projet multiplateforme de production.</div>
               <div class="sub-comp-proj"><span class="proj-tag">Eklekktik</span><span class="proj-tag">Find</span></div>
             </div>
           </li>
@@ -476,6 +501,7 @@
             <span class="sub-comp-dot"></span>
             <div class="sub-comp-text">
               Mettre en œuvre des outils et stratégies de veille informationnelle
+              <div class="sub-comp-justif">Suivi régulier de serveurs Discord spécialisés en rendu graphique, exploration de Shadertoy (GLSL, ray marching), lecture de la documentation Khronos/W3C WebGPU, visionnage de contenus YouTube (TheCherno, Sebastian Lague, Brendan Galea).</div>
               <div class="sub-comp-proj"><span class="proj-tag">Veille APIs</span></div>
             </div>
           </li>
@@ -483,6 +509,7 @@
             <span class="sub-comp-dot"></span>
             <div class="sub-comp-text">
               Gérer son identité professionnelle
+              <div class="sub-comp-justif">Conception et publication de ce portfolio numérique sur GitHub Pages (ismaelok.github.io/Portfolio). Présence GitHub avec les projets du BTS accessibles publiquement.</div>
               <div class="sub-comp-proj"><span class="proj-tag">Portfolio</span><span class="proj-tag">GitHub</span></div>
             </div>
           </li>
@@ -490,6 +517,7 @@
             <span class="sub-comp-dot"></span>
             <div class="sub-comp-text">
               Développer son projet professionnel
+              <div class="sub-comp-justif">Find : stage de 2ème année mené de A à Z sur un stack moderne (Flutter, Firebase), renforçant l'autonomie technique et la capacité à conduire un projet complet en binôme. Veille APIs graphiques en lien avec un intérêt personnel pour le rendu temps réel et l'art numérique.</div>
               <div class="sub-comp-proj"><span class="proj-tag">Find</span><span class="proj-tag">Veille APIs</span></div>
             </div>
           </li>
