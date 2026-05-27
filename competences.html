@@ -257,7 +257,8 @@
           <tr class="section-row"><td colspan="7">Réalisation en cours de formation</td></tr>
           <tr>
             <td class="proj-name">M2L — Site dynamique<small>AP · Gestion des formations</small></td>
-            <td></td><td></td>
+            <td><button class="x-btn" onclick="openModal('modal-m2l-patrimoine')">✕</button></td>
+            <td><button class="x-btn" onclick="openModal('modal-m2l-incidents')">✕</button></td>
             <td><button class="x-btn" onclick="openModal('modal-m2l-presence')">✕</button></td>
             <td><button class="x-btn" onclick="openModal('modal-m2l-projet')">✕</button></td>
             <td><button class="x-btn" onclick="openModal('modal-m2l-service')">✕</button></td>
@@ -265,7 +266,8 @@
           </tr>
           <tr>
             <td class="proj-name">API — Aux Claviers Citoyens<small>AP · API e-sport · Authentification</small></td>
-            <td></td><td></td>
+            <td><button class="x-btn" onclick="openModal('modal-acc-patrimoine')">✕</button></td>
+            <td><button class="x-btn" onclick="openModal('modal-acc-incidents')">✕</button></td>
             <td><button class="x-btn" onclick="openModal('modal-acc-presence')">✕</button></td>
             <td><button class="x-btn" onclick="openModal('modal-acc-projet')">✕</button></td>
             <td><button class="x-btn" onclick="openModal('modal-acc-service')">✕</button></td>
@@ -325,23 +327,7 @@
             <span class="sub-comp-dot"></span>
             <div class="sub-comp-text">
               Recenser et identifier les ressources numériques
-              <div class="sub-comp-justif">Recensement des collections Firestore (users, activities, participations, reports), identification et documentation des services Firebase utilisés (Firestore, Auth, Storage, Cloud Functions v2) dans le projet <em>find-b5b09</em>.</div>
-              <div class="sub-comp-proj"><span class="proj-tag">Find</span></div>
-            </div>
-          </li>
-          <li class="sub-comp-item">
-            <span class="sub-comp-dot"></span>
-            <div class="sub-comp-text">
-              Mettre en place et vérifier les niveaux d'habilitation
-              <div class="sub-comp-justif">Définition des règles de sécurité Firestore par rôle (utilisateur authentifié, propriétaire d'activité, administrateur). Firebase Auth comme gestionnaire d'identités — contrôle de l'accès à toutes les ressources.</div>
-              <div class="sub-comp-proj"><span class="proj-tag">Find</span></div>
-            </div>
-          </li>
-          <li class="sub-comp-item">
-            <span class="sub-comp-dot"></span>
-            <div class="sub-comp-text">
-              Vérifier les conditions de la continuité d'un service
-              <div class="sub-comp-justif">Cloud Functions v2 planifiées (<code>expireActivities</code> toutes les 5 min, <code>maintainActivityPopularity</code> toutes les 15 min) assurant la cohérence du service en continu. Scripts de réparation de données pour rétablir l'intégrité en cas d'incohérence.</div>
+              <div class="sub-comp-justif">Find : recensement des collections Firestore (users, activities, participations, reports) et identification des services Firebase utilisés dans le projet <em>find-b5b09</em>.</div>
               <div class="sub-comp-proj"><span class="proj-tag">Find</span></div>
             </div>
           </li>
@@ -349,7 +335,31 @@
             <span class="sub-comp-dot"></span>
             <div class="sub-comp-text">
               Exploiter des référentiels, normes et standards
-              <div class="sub-comp-justif">Application stricte du pattern MVVM documenté dans le MANIFESTO du projet. Respect de la documentation officielle Firebase Security Rules et des conventions Dart/Flutter.</div>
+              <div class="sub-comp-justif">M2L : respect du modèle MVC, conventions PHP et normes SQL. API ACC : respect des standards REST (endpoints, codes HTTP, JWT). Find : application stricte du pattern MVVM documenté dans le MANIFESTO et des Firebase Security Rules.</div>
+              <div class="sub-comp-proj"><span class="proj-tag">M2L</span><span class="proj-tag">API ACC</span><span class="proj-tag">Find</span></div>
+            </div>
+          </li>
+          <li class="sub-comp-item">
+            <span class="sub-comp-dot"></span>
+            <div class="sub-comp-text">
+              Mettre en place et vérifier les niveaux d'habilitation
+              <div class="sub-comp-justif">M2L : rôles responsable de formation / utilisateur — interfaces et droits d'accès différenciés. Find : règles de sécurité Firestore par rôle (utilisateur authentifié, propriétaire d'activité, admin) via Firebase Auth.</div>
+              <div class="sub-comp-proj"><span class="proj-tag">M2L</span><span class="proj-tag">Find</span></div>
+            </div>
+          </li>
+          <li class="sub-comp-item">
+            <span class="sub-comp-dot"></span>
+            <div class="sub-comp-text">
+              Gérer des sauvegardes
+              <div class="sub-comp-justif">M2L &amp; API ACC : versionnage du code source sur GitHub (commits réguliers, branches). Find : sauvegardes Firestore et scripts de réparation de données pour maintenir l'intégrité en cas d'incohérence.</div>
+              <div class="sub-comp-proj"><span class="proj-tag">M2L</span><span class="proj-tag">API ACC</span><span class="proj-tag">Find</span></div>
+            </div>
+          </li>
+          <li class="sub-comp-item">
+            <span class="sub-comp-dot"></span>
+            <div class="sub-comp-text">
+              Vérifier les conditions de la continuité d'un service
+              <div class="sub-comp-justif">Find : Cloud Functions v2 planifiées (<code>expireActivities</code> toutes les 5 min, <code>maintainActivityPopularity</code> toutes les 15 min) assurant la disponibilité et la cohérence du service en continu.</div>
               <div class="sub-comp-proj"><span class="proj-tag">Find</span></div>
             </div>
           </li>
@@ -365,16 +375,16 @@
             <span class="sub-comp-dot"></span>
             <div class="sub-comp-text">
               Collecter, suivre et orienter des demandes
-              <div class="sub-comp-justif">Eklekktik : collecte et priorisation des retours fonctionnels des membres de l'association au fil du stage. Find : suivi des anomalies et demandes d'évolution gérées en binôme via GitHub issues et réunions quotidiennes.</div>
-              <div class="sub-comp-proj"><span class="proj-tag">Eklekktik</span><span class="proj-tag">Find</span></div>
+              <div class="sub-comp-justif">M2L : suivi des tâches et demandes d'évolution en groupe via outil collaboratif. API ACC : tickets de spécification suivis tout au long du développement. Eklekktik : collecte des retours des membres de l'association. Find : suivi des anomalies en binôme via GitHub issues.</div>
+              <div class="sub-comp-proj"><span class="proj-tag">M2L</span><span class="proj-tag">API ACC</span><span class="proj-tag">Eklekktik</span><span class="proj-tag">Find</span></div>
             </div>
           </li>
           <li class="sub-comp-item">
             <span class="sub-comp-dot"></span>
             <div class="sub-comp-text">
               Traiter des demandes concernant les applications
-              <div class="sub-comp-justif">Eklekktik : diagnostic et correction des anomalies signalées sur l'application Android, validation avec les responsables. Find : résolution de bugs liés à la synchronisation Firestore, aux filtres de géolocalisation et au cycle de vie des activités.</div>
-              <div class="sub-comp-proj"><span class="proj-tag">Eklekktik</span><span class="proj-tag">Find</span></div>
+              <div class="sub-comp-justif">M2L : intégration des demandes d'évolution du module formations (ajout de fonctionnalités, corrections). Eklekktik : diagnostic et correction des anomalies Android. Find : résolution de bugs liés à la synchronisation Firestore et au cycle de vie des activités.</div>
+              <div class="sub-comp-proj"><span class="proj-tag">M2L</span><span class="proj-tag">Eklekktik</span><span class="proj-tag">Find</span></div>
             </div>
           </li>
           <li class="sub-comp-item">
@@ -532,6 +542,117 @@
   </footer>
 
   <!-- ═══════════════════════ MODALS ══════════════════════════════════════════ -->
+
+  <!-- M2L — Patrimoine -->
+  <div class="modal-overlay" id="modal-m2l-patrimoine" onclick="if(event.target===this)closeModal(this)">
+    <div class="modal-box">
+      <div class="modal-head">
+        <h5>M2L — Gérer le patrimoine informatique</h5>
+        <button class="modal-close" onclick="closeModal(document.getElementById('modal-m2l-patrimoine'))">✕</button>
+      </div>
+      <div class="modal-body">
+        <p>Le projet M2L a mobilisé plusieurs sous-compétences de gestion du patrimoine informatique.</p>
+        <h6>Exploiter des référentiels, normes et standards</h6>
+        <ul>
+          <li>Développement en PHP selon le modèle MVC fourni par le lycée</li>
+          <li>Respect des conventions de nommage SQL et des contraintes de la base de données existante</li>
+          <li>Utilisation des normes HTML/CSS et des bonnes pratiques JavaScript</li>
+        </ul>
+        <h6>Mettre en place et vérifier les niveaux d'habilitation</h6>
+        <ul>
+          <li>Mise en place de rôles distincts : utilisateur standard / responsable de formation</li>
+          <li>Vérification des droits d'accès à chaque action (accepter/refuser une demande d'inscription)</li>
+          <li>Protection des routes sensibles selon le rôle connecté</li>
+        </ul>
+        <h6>Gérer des sauvegardes</h6>
+        <ul>
+          <li>Versionnage du code source sur GitHub avec commits réguliers et branches par fonctionnalité</li>
+          <li>Sauvegarde de la base de données MySQL lors des livraisons</li>
+        </ul>
+        <div class="modal-imgs">
+          <img src="img/m2l_1.png" alt="M2L"><img src="img/m2l_2.png" alt="M2L">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- M2L — Incidents -->
+  <div class="modal-overlay" id="modal-m2l-incidents" onclick="if(event.target===this)closeModal(this)">
+    <div class="modal-box">
+      <div class="modal-head">
+        <h5>M2L — Répondre aux incidents et demandes</h5>
+        <button class="modal-close" onclick="closeModal(document.getElementById('modal-m2l-incidents'))">✕</button>
+      </div>
+      <div class="modal-body">
+        <p>Tout au long du projet, les demandes d'évolution ont été collectées, suivies et traitées en groupe.</p>
+        <h6>Collecter, suivre et orienter des demandes</h6>
+        <ul>
+          <li>Suivi des tâches et demandes d'évolution via un outil collaboratif partagé en groupe de 3</li>
+          <li>Priorisation des fonctionnalités à développer en concertation avec l'équipe</li>
+          <li>Communication régulière avec l'encadrant pédagogique pour orienter les demandes</li>
+        </ul>
+        <h6>Traiter des demandes concernant les applications</h6>
+        <ul>
+          <li>Intégration des retours sur le module formations : correction de la logique d'acceptation des inscriptions</li>
+          <li>Résolution des anomalies signalées lors des tests par les autres membres du groupe</li>
+          <li>Adaptation de l'interface suite aux retours utilisateurs (responsables de formation)</li>
+        </ul>
+        <div class="modal-imgs">
+          <img src="img/m2l_3.png" alt="M2L">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- API ACC — Patrimoine -->
+  <div class="modal-overlay" id="modal-acc-patrimoine" onclick="if(event.target===this)closeModal(this)">
+    <div class="modal-box">
+      <div class="modal-head">
+        <h5>API ACC — Gérer le patrimoine informatique</h5>
+        <button class="modal-close" onclick="closeModal(document.getElementById('modal-acc-patrimoine'))">✕</button>
+      </div>
+      <div class="modal-body">
+        <p>Le développement de l'API e-sport a mobilisé des compétences de gestion du patrimoine applicatif.</p>
+        <h6>Exploiter des référentiels, normes et standards</h6>
+        <ul>
+          <li>Respect des spécifications d'endpoints définies en amont (structure, méthodes HTTP, codes de retour)</li>
+          <li>Application des standards REST pour la conception de l'API</li>
+          <li>Utilisation du standard JWT (RFC 7519) pour l'authentification et RBAC pour les droits d'accès</li>
+          <li>Hash des mots de passe avec bcrypt conformément aux bonnes pratiques de sécurité</li>
+        </ul>
+        <h6>Gérer des sauvegardes</h6>
+        <ul>
+          <li>Versionnage continu du code sur GitHub avec branches dédiées par fonctionnalité</li>
+          <li>Sauvegarde de la base de données MySQL lors des jalons de développement</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- API ACC — Incidents -->
+  <div class="modal-overlay" id="modal-acc-incidents" onclick="if(event.target===this)closeModal(this)">
+    <div class="modal-box">
+      <div class="modal-head">
+        <h5>API ACC — Répondre aux incidents et demandes</h5>
+        <button class="modal-close" onclick="closeModal(document.getElementById('modal-acc-incidents'))">✕</button>
+      </div>
+      <div class="modal-body">
+        <p>Le développement du module d'authentification a impliqué un suivi structuré des demandes fonctionnelles.</p>
+        <h6>Collecter, suivre et orienter des demandes</h6>
+        <ul>
+          <li>Suivi des tickets de spécification fonctionnelle tout au long du développement du module</li>
+          <li>Priorisation des fonctionnalités d'authentification selon les attentes du commanditaire</li>
+          <li>Coordination avec les développeurs front-end pour orienter les besoins en endpoints</li>
+        </ul>
+        <h6>Traiter des demandes concernant les applications</h6>
+        <ul>
+          <li>Correction des anomalies détectées sur les endpoints d'authentification lors des tests Postman</li>
+          <li>Adaptation du module RBAC aux retours des développeurs consommant l'API</li>
+          <li>Documentation des endpoints livrés pour faciliter leur intégration</li>
+        </ul>
+      </div>
+    </div>
+  </div>
 
   <!-- M2L -->
   <div class="modal-overlay" id="modal-m2l-presence" onclick="if(event.target===this)closeModal(this)">
