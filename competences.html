@@ -335,7 +335,7 @@
             <span class="sub-comp-dot"></span>
             <div class="sub-comp-text">
               Exploiter des référentiels, normes et standards
-              <div class="sub-comp-justif">M2L : respect du modèle MVC, conventions PHP et normes SQL. API ACC : respect des standards REST (endpoints, codes HTTP, JWT). Find : application stricte du pattern MVVM documenté dans le MANIFESTO et des Firebase Security Rules.</div>
+              <div class="sub-comp-justif">M2L : respect du modèle MVC, conventions PHP et normes SQL. API ACC : respect des standards REST (endpoints, codes HTTP, JWT RFC 7519, Argon2id pour les mots de passe). Find : application stricte du pattern MVVM documenté dans le MANIFESTO et des Firebase Security Rules.</div>
               <div class="sub-comp-proj"><span class="proj-tag">M2L</span><span class="proj-tag">API ACC</span><span class="proj-tag">Find</span></div>
             </div>
           </li>
@@ -617,8 +617,8 @@
         <ul>
           <li>Respect des spécifications d'endpoints définies en amont (structure, méthodes HTTP, codes de retour)</li>
           <li>Application des standards REST pour la conception de l'API</li>
-          <li>Utilisation du standard JWT (RFC 7519) pour l'authentification et RBAC pour les droits d'accès</li>
-          <li>Hash des mots de passe avec bcrypt conformément aux bonnes pratiques de sécurité</li>
+          <li>Utilisation du standard JWT (RFC 7519) pour l'authentification — token Bearer, HMAC-SHA256, expiry 1h</li>
+          <li>Hash des mots de passe avec <strong>Argon2id</strong> (<code>PASSWORD_ARGON2ID</code>) conformément aux recommandations de sécurité actuelles</li>
         </ul>
         <h6>Gérer des sauvegardes</h6>
         <ul>
@@ -759,11 +759,11 @@
         <button class="modal-close" onclick="closeModal(document.getElementById('modal-acc-service'))">✕</button>
       </div>
       <div class="modal-body">
-        <p>Le module d'authentification a été testé et intégré à l'API pour être mis à disposition.</p>
+        <p>Le module d'authentification a été testé sur Postman et intégré à l'API pour être mis à disposition des consommateurs.</p>
         <ul>
-          <li>Tests unitaires et fonctionnels sur les endpoints d'authentification</li>
-          <li>Vérification de la sécurité (hash des mots de passe, expiration des tokens JWT)</li>
-          <li>Documentation des endpoints pour les développeurs front-end</li>
+          <li>Tests des endpoints sur Postman (register, login, /me, update)</li>
+          <li>Vérification de la sécurité : hash Argon2id, expiration des tokens JWT (1h), rejet des tokens invalides</li>
+          <li>Documentation des endpoints pour les développeurs front-end consommant l'API</li>
         </ul>
       </div>
     </div>
@@ -776,11 +776,11 @@
         <button class="modal-close" onclick="closeModal(document.getElementById('modal-acc-devpro'))">✕</button>
       </div>
       <div class="modal-body">
-        <p>Ce projet a permis de développer des compétences avancées en sécurité applicative.</p>
+        <p>Ce projet a permis de développer des compétences concrètes en sécurité applicative et en conception d'API.</p>
         <ul>
-          <li>Montée en compétences sur l'authentification et la sécurité des APIs (JWT, RBAC)</li>
-          <li>Veille sur les bonnes pratiques de développement d'APIs sécurisées</li>
-          <li>Travail dans un contexte professionnel exigeant (Défense française)</li>
+          <li>Montée en compétences sur l'authentification par token JWT et la sécurisation des APIs REST</li>
+          <li>Découverte et application d'Argon2id pour le hachage de mots de passe (algorithme recommandé par l'OWASP)</li>
+          <li>Travail dans un contexte professionnel exigeant (collaboration Défense française)</li>
         </ul>
       </div>
     </div>

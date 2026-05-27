@@ -208,25 +208,25 @@
             </p>
             <p style="color:var(--text-muted); line-height:1.75; margin-bottom:1rem;">
               Ma contribution principale a porté sur le <strong style="color:var(--text)">module d'authentification</strong> :
-              inscription, connexion sécurisée, gestion des sessions (tokens JWT), et contrôle des droits d'accès
-              selon le rôle de l'utilisateur (joueur, capitaine d'équipe, administrateur).
+              inscription, connexion sécurisée et gestion des sessions via tokens JWT — un seul type d'utilisateur,
+              consommateur de l'API.
             </p>
             <div class="tags" style="margin-top:1.25rem;">
               <span class="tag">REST API</span>
               <span class="tag">JWT</span>
-              <span class="tag">PHP / Symfony</span>
+              <span class="tag">PHP</span>
               <span class="tag">MySQL</span>
-              <span class="tag purple">Authentification</span>
-              <span class="tag amber">Stage · Armée fr.</span>
+              <span class="tag purple">Argon2id</span>
+              <span class="tag amber">AP · Armée fr.</span>
             </div>
           </div>
           <div>
             <div style="background:var(--surface2); border:1px solid var(--border); border-radius:10px; padding:1.25rem; margin-bottom:1rem;">
               <h4 style="font-size:0.85rem; font-weight:700; color:var(--accent3); margin-bottom:0.75rem; text-transform:uppercase; letter-spacing:0.06em;">Fonctionnalités développées</h4>
               <ul style="padding-left:1.1rem; color:var(--text-muted); font-size:0.88rem; line-height:1.8;">
-                <li>Inscription et connexion sécurisée (hash bcrypt)</li>
-                <li>Génération et validation de tokens JWT</li>
-                <li>Gestion des rôles (RBAC) et protection des routes</li>
+                <li>Inscription et connexion sécurisée (hash <strong style="color:var(--text)">Argon2id</strong>)</li>
+                <li>Génération et validation de tokens JWT (HMAC-SHA256, expiry 1h)</li>
+                <li>Protection des routes par vérification du token Bearer</li>
                 <li>Endpoints CRUD pour joueurs et équipes</li>
                 <li>Documentation de l'API</li>
               </ul>
