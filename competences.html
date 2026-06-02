@@ -271,7 +271,7 @@
             <td><button class="x-btn" onclick="openModal('modal-acc-presence')">✕</button></td>
             <td><button class="x-btn" onclick="openModal('modal-acc-projet')">✕</button></td>
             <td><button class="x-btn" onclick="openModal('modal-acc-service')">✕</button></td>
-            <td><button class="x-btn" onclick="openModal('modal-acc-devpro')">✕</button></td>
+            <td></td>
           </tr>
 
           <!-- Stage 2ème année session 2025 -->
@@ -423,8 +423,8 @@
             <span class="sub-comp-dot"></span>
             <div class="sub-comp-text">
               Référencer les services en ligne et mesurer leur visibilité
-              <div class="sub-comp-justif">M2L : mise en ligne et référencement des formations sur la plateforme, interface permettant aux responsables de consulter et gérer les inscriptions. Find : publication de l'application et référencement des activités par géolocalisation.</div>
-              <div class="sub-comp-proj"><span class="proj-tag">M2L</span><span class="proj-tag">Find</span></div>
+              <div class="sub-comp-justif">M2L : mise en ligne et référencement des formations sur la plateforme, interface permettant aux responsables de consulter et gérer les inscriptions.</div>
+              <div class="sub-comp-proj"><span class="proj-tag">M2L</span></div>
             </div>
           </li>
         </ul>
@@ -471,16 +471,16 @@
             <span class="sub-comp-dot"></span>
             <div class="sub-comp-text">
               Réaliser les tests d'intégration et d'acceptation
-              <div class="sub-comp-justif">M2L : tests fonctionnels du module formations (acceptation/refus d'inscriptions, vérification des droits par rôle). Find : tests unitaires et d'intégration Flutter, validation des scénarios utilisateur bout en bout.</div>
-              <div class="sub-comp-proj"><span class="proj-tag">M2L</span><span class="proj-tag">Find</span></div>
+              <div class="sub-comp-justif">M2L : tests fonctionnels du module formations (acceptation/refus d'inscriptions, vérification des droits par rôle). API ACC : tests Postman des endpoints d'authentification sur environnement local WAMP (register, login, /me), vérification du hash Argon2id et de l'expiration JWT. Find : tests unitaires et d'intégration Flutter, validation des scénarios utilisateur bout en bout.</div>
+              <div class="sub-comp-proj"><span class="proj-tag">M2L</span><span class="proj-tag">API ACC</span><span class="proj-tag">Find</span></div>
             </div>
           </li>
           <li class="sub-comp-item">
             <span class="sub-comp-dot"></span>
             <div class="sub-comp-text">
               Déployer un service
-              <div class="sub-comp-justif">M2L : déploiement du module sur l'environnement de production du lycée. API ACC : mise en production des endpoints d'authentification (JWT, RBAC). Find : déploiement Firebase production (plan Blaze, région europe-west1) avec Cloud Functions v2 et build release Android.</div>
-              <div class="sub-comp-proj"><span class="proj-tag">M2L</span><span class="proj-tag">API ACC</span><span class="proj-tag">Find</span></div>
+              <div class="sub-comp-justif">M2L : déploiement du module sur l'environnement de production du lycée. Find : déploiement Firebase production (plan Blaze, région europe-west1) avec Cloud Functions v2 et build release Android.</div>
+              <div class="sub-comp-proj"><span class="proj-tag">M2L</span><span class="proj-tag">Find</span></div>
             </div>
           </li>
           <li class="sub-comp-item">
@@ -759,28 +759,11 @@
         <button class="modal-close" onclick="closeModal(document.getElementById('modal-acc-service'))">✕</button>
       </div>
       <div class="modal-body">
-        <p>Le module d'authentification a été testé sur Postman et intégré à l'API pour être mis à disposition des consommateurs.</p>
+        <p>Le module d'authentification a été testé sur un environnement local (WAMP) et validé via Postman avant intégration dans l'API.</p>
         <ul>
-          <li>Tests des endpoints sur Postman (register, login, /me, update)</li>
+          <li>Tests des endpoints d'authentification sur Postman (register, login, /me, update) en local WAMP</li>
           <li>Vérification de la sécurité : hash Argon2id, expiration des tokens JWT (1h), rejet des tokens invalides</li>
           <li>Documentation des endpoints pour les développeurs front-end consommant l'API</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
-  <div class="modal-overlay" id="modal-acc-devpro" onclick="if(event.target===this)closeModal(this)">
-    <div class="modal-box">
-      <div class="modal-head">
-        <h5>API ACC : Développement professionnel</h5>
-        <button class="modal-close" onclick="closeModal(document.getElementById('modal-acc-devpro'))">✕</button>
-      </div>
-      <div class="modal-body">
-        <p>Ce projet a permis de développer des compétences concrètes en sécurité applicative et en conception d'API.</p>
-        <ul>
-          <li>Montée en compétences sur l'authentification par token JWT et la sécurisation des APIs REST</li>
-          <li>Découverte et application d'Argon2id pour le hachage de mots de passe (algorithme recommandé par l'OWASP)</li>
-          <li>Travail dans un contexte professionnel exigeant (collaboration Défense française)</li>
         </ul>
       </div>
     </div>
