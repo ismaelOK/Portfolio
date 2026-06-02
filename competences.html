@@ -278,7 +278,7 @@
           <tr class="section-row"><td colspan="7">Stage · Eklekktik</td></tr>
           <tr>
             <td class="proj-name">Eklekktik : App mobile<small>Association culturelle</small></td>
-            <td></td>
+            <td><button class="x-btn" onclick="openModal('modal-eklekktik-patrimoine')">✕</button></td>
             <td><button class="x-btn" onclick="openModal('modal-eklekktik-incidents')">✕</button></td>
             <td><button class="x-btn" onclick="openModal('modal-eklekktik-presence')">✕</button></td>
             <td><button class="x-btn" onclick="openModal('modal-eklekktik-projet')">✕</button></td>
@@ -327,8 +327,8 @@
             <span class="sub-comp-dot"></span>
             <div class="sub-comp-text">
               Recenser et identifier les ressources numériques
-              <div class="sub-comp-justif">Find : recensement des collections Firestore (users, activities, participations, reports) et identification des services Firebase utilisés dans le projet <em>find-b5b09</em>.</div>
-              <div class="sub-comp-proj"><span class="proj-tag">Find</span></div>
+              <div class="sub-comp-justif">Eklekktik : recensement des fonctionnalités de l'application et des ressources consommées (API REST, base de données des membres). Find : recensement des collections Firestore (users, activities, participations, reports) et identification des services Firebase utilisés dans le projet <em>find-b5b09</em>.</div>
+              <div class="sub-comp-proj"><span class="proj-tag">Eklekktik</span><span class="proj-tag">Find</span></div>
             </div>
           </li>
           <li class="sub-comp-item">
@@ -343,16 +343,16 @@
             <span class="sub-comp-dot"></span>
             <div class="sub-comp-text">
               Mettre en place et vérifier les niveaux d'habilitation
-              <div class="sub-comp-justif">M2L : rôles responsable de formation / utilisateur, interfaces et droits d'accès différenciés. Find : règles de sécurité Firestore par rôle (utilisateur authentifié, propriétaire d'activité, admin) via Firebase Auth.</div>
-              <div class="sub-comp-proj"><span class="proj-tag">M2L</span><span class="proj-tag">Find</span></div>
+              <div class="sub-comp-justif">M2L : rôles responsable de formation / utilisateur, interfaces et droits d'accès différenciés. Eklekktik : vérification du type d'utilisateur pour contrôler l'accès aux fonctionnalités de l'application. Find : règles de sécurité Firestore par rôle (utilisateur authentifié, propriétaire d'activité, admin) via Firebase Auth.</div>
+              <div class="sub-comp-proj"><span class="proj-tag">M2L</span><span class="proj-tag">Eklekktik</span><span class="proj-tag">Find</span></div>
             </div>
           </li>
           <li class="sub-comp-item">
             <span class="sub-comp-dot"></span>
             <div class="sub-comp-text">
               Gérer des sauvegardes
-              <div class="sub-comp-justif">M2L &amp; API ACC : versionnage du code source sur GitHub (commits réguliers, branches). Find : sauvegardes Firestore et scripts de réparation de données pour maintenir l'intégrité en cas d'incohérence.</div>
-              <div class="sub-comp-proj"><span class="proj-tag">M2L</span><span class="proj-tag">API ACC</span><span class="proj-tag">Find</span></div>
+              <div class="sub-comp-justif">M2L, API ACC &amp; Eklekktik : versionnage du code source sur GitHub (commits réguliers, branches par fonctionnalité). Find : versionnage Git et sauvegardes Firestore avec scripts de réparation de données pour maintenir l'intégrité en cas d'incohérence.</div>
+              <div class="sub-comp-proj"><span class="proj-tag">M2L</span><span class="proj-tag">API ACC</span><span class="proj-tag">Eklekktik</span><span class="proj-tag">Find</span></div>
             </div>
           </li>
           <li class="sub-comp-item">
@@ -770,6 +770,35 @@
   </div>
 
   <!-- Eklekktik -->
+  <div class="modal-overlay" id="modal-eklekktik-patrimoine" onclick="if(event.target===this)closeModal(this)">
+    <div class="modal-box">
+      <div class="modal-head">
+        <h5>Eklekktik : Gérer le patrimoine informatique</h5>
+        <button class="modal-close" onclick="closeModal(document.getElementById('modal-eklekktik-patrimoine'))">✕</button>
+      </div>
+      <div class="modal-body">
+        <h6>Recenser et identifier les ressources numériques</h6>
+        <ul>
+          <li>Recensement des fonctionnalités de l'application et des ressources consommées (API REST, base de données des membres)</li>
+          <li>Identification des dépendances et des composants tiers intégrés</li>
+        </ul>
+        <h6>Mettre en place et vérifier les niveaux d'habilitation</h6>
+        <ul>
+          <li>Vérification du type d'utilisateur pour contrôler l'accès aux fonctionnalités de l'application</li>
+          <li>Différenciation des droits selon le profil (membre, administrateur de l'association)</li>
+        </ul>
+        <h6>Gérer des sauvegardes</h6>
+        <ul>
+          <li>Versionnage du code source sur GitHub avec commits réguliers et branches par fonctionnalité</li>
+          <li>Protection du patrimoine logiciel via le dépôt distant (sauvegarde hors site)</li>
+        </ul>
+        <div class="modal-imgs">
+          <img src="img/eklekktik_1.png" alt="Eklekktik"><img src="img/eklekktik_2.png" alt="Eklekktik">
+        </div>
+      </div>
+    </div>
+  </div>
+
   <div class="modal-overlay" id="modal-eklekktik-incidents" onclick="if(event.target===this)closeModal(this)">
     <div class="modal-box">
       <div class="modal-head">
