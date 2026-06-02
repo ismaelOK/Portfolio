@@ -268,7 +268,7 @@
             <td class="proj-name">API : Aux Claviers Citoyens<small>AP · API e-sport · Authentification</small></td>
             <td><button class="x-btn" onclick="openModal('modal-acc-patrimoine')">✕</button></td>
             <td><button class="x-btn" onclick="openModal('modal-acc-incidents')">✕</button></td>
-            <td><button class="x-btn" onclick="openModal('modal-acc-presence')">✕</button></td>
+            <td></td>
             <td><button class="x-btn" onclick="openModal('modal-acc-projet')">✕</button></td>
             <td><button class="x-btn" onclick="openModal('modal-acc-service')">✕</button></td>
             <td></td>
@@ -716,24 +716,6 @@
     </div>
   </div>
 
-  <!-- API ACC -->
-  <div class="modal-overlay" id="modal-acc-presence" onclick="if(event.target===this)closeModal(this)">
-    <div class="modal-box">
-      <div class="modal-head">
-        <h5>API ACC : Développer la présence en ligne</h5>
-        <button class="modal-close" onclick="closeModal(document.getElementById('modal-acc-presence'))">✕</button>
-      </div>
-      <div class="modal-body">
-        <p>L'API Aux Claviers Citoyens est le service numérique central de la plateforme e-sport, exposant les données de l'organisation.</p>
-        <ul>
-          <li>Développement d'une API REST exposant les données joueurs, équipes et tournois</li>
-          <li>Contribution à la création d'un service numérique valorisant l'image de l'organisation</li>
-          <li>Prise en compte des exigences de sécurité liées au contexte (collaboration Armée française)</li>
-        </ul>
-      </div>
-    </div>
-  </div>
-
   <div class="modal-overlay" id="modal-acc-projet" onclick="if(event.target===this)closeModal(this)">
     <div class="modal-box">
       <div class="modal-head">
@@ -742,11 +724,16 @@
       </div>
       <div class="modal-body">
         <p>Projet conduit selon une méthodologie structurée dans un contexte professionnel exigeant.</p>
+        <h6>Analyser les objectifs et modalités d'organisation</h6>
         <ul>
-          <li>Analyse du cahier des charges et des exigences de sécurité</li>
-          <li>Planification du développement du module d'authentification</li>
-          <li>Collaboration avec d'autres développeurs et parties prenantes</li>
-          <li>Documentation du module développé</li>
+          <li>Analyse du cahier des charges et des exigences de sécurité imposées par le contexte</li>
+          <li>Identification du périmètre du module d'authentification à développer</li>
+        </ul>
+        <h6>Évaluer les indicateurs de suivi et analyser les écarts</h6>
+        <ul>
+          <li>Suivi de l'avancement du module d'authentification par rapport aux spécifications initiales</li>
+          <li>Documentation des endpoints livrés et des écarts par rapport aux attentes</li>
+          <li>Coordination avec les développeurs front-end pour valider que les livrables correspondaient aux besoins</li>
         </ul>
       </div>
     </div>
@@ -854,6 +841,9 @@
           <li>Présentation régulière de l'avancement aux responsables</li>
           <li>Livraison d'une application opérationnelle en fin de stage</li>
         </ul>
+        <div class="modal-imgs">
+          <img src="img/eklekktik_1.png" alt="Eklekktik"><img src="img/eklekktik_2.png" alt="Eklekktik">
+        </div>
       </div>
     </div>
   </div>
@@ -871,6 +861,9 @@
           <li>Auto-formation aux technologies utilisées dans le projet</li>
           <li>Développement de l'autonomie et de la capacité à communiquer avec une équipe</li>
         </ul>
+        <div class="modal-imgs">
+          <img src="img/eklekktik_3.png" alt="Eklekktik"><img src="img/eklekktik_4.png" alt="Eklekktik">
+        </div>
       </div>
     </div>
   </div>
@@ -884,12 +877,34 @@
       </div>
       <div class="modal-body">
         <p>Find repose sur une infrastructure Firebase complète dont j'ai participé à la mise en place et à la gestion.</p>
+        <h6>Recenser et identifier les ressources numériques</h6>
         <ul>
-          <li>Mise en place des règles de sécurité Firestore (contrôle d'accès selon les rôles)</li>
-          <li>Configuration des règles Firebase Storage pour protéger les médias</li>
-          <li>Gestion des ressources cloud (Firestore, Storage, Cloud Functions) sur le projet <code>find-b5b09</code></li>
-          <li>Scripts de réparation de données (<code>repairActivityLifecycleAndCounters.ts</code>) pour maintenir la cohérence de la base</li>
+          <li>Recensement des collections Firestore : <code>users</code>, <code>activities</code>, <code>participations</code>, <code>reports</code></li>
+          <li>Identification des services Firebase utilisés dans le projet <code>find-b5b09</code> (Firestore, Auth, Storage, Cloud Functions v2)</li>
         </ul>
+        <h6>Exploiter des référentiels, normes et standards</h6>
+        <ul>
+          <li>Application stricte du pattern MVVM documenté dans le MANIFESTO d'architecture du projet</li>
+          <li>Respect des Firebase Security Rules comme standard de contrôle d'accès aux données</li>
+        </ul>
+        <h6>Mettre en place et vérifier les niveaux d'habilitation</h6>
+        <ul>
+          <li>Règles Firestore différenciées par rôle (utilisateur authentifié, propriétaire d'activité, admin)</li>
+          <li>Configuration des règles Firebase Storage pour protéger les médias des utilisateurs</li>
+        </ul>
+        <h6>Gérer des sauvegardes</h6>
+        <ul>
+          <li>Versionnage Git/GitHub avec branches par fonctionnalité et commits réguliers</li>
+          <li>Scripts de réparation (<code>repairActivityLifecycleAndCounters.ts</code>) pour corriger les incohérences Firestore</li>
+        </ul>
+        <h6>Vérifier les conditions de la continuité d'un service</h6>
+        <ul>
+          <li><code>expireActivities</code> planifiée toutes les 5 min : expiration automatique des activités terminées</li>
+          <li><code>maintainActivityPopularity</code> toutes les 15 min : recalcul des scores de popularité</li>
+        </ul>
+        <div class="modal-imgs">
+          <img src="img/find_1.png" alt="Find - console Firestore" style="grid-column:1/-1; max-height:200px; object-fit:cover;">
+        </div>
       </div>
     </div>
   </div>
@@ -902,12 +917,24 @@
       </div>
       <div class="modal-body">
         <p>Le développement en binôme a impliqué une gestion continue des anomalies et demandes d'évolution.</p>
+        <h6>Collecter, suivre et orienter des demandes</h6>
         <ul>
           <li>Collecte et suivi des retours fonctionnels sur les écrans développés</li>
-          <li>Diagnostic d'anomalies liées à la synchronisation Firestore et à la géolocalisation</li>
-          <li>Traitement des demandes d'évolution sur le cycle de vie des activités</li>
+          <li>Suivi des anomalies en binôme via GitHub issues et Linear</li>
+        </ul>
+        <h6>Traiter des demandes concernant les applications</h6>
+        <ul>
+          <li>Diagnostic d'anomalies liées à la synchronisation Firestore et au cycle de vie des activités</li>
           <li>Scripts de réparation pour corriger les incohérences en base de données</li>
         </ul>
+        <h6>Traiter des demandes concernant les services réseau et système</h6>
+        <ul>
+          <li>Gestion des erreurs de connectivité Firebase et diagnostics de latence sur les requêtes temps réel</li>
+          <li>Configuration des indexes Firestore composites pour les requêtes géospatiales (GeoFlutterFire Plus)</li>
+        </ul>
+        <div class="modal-imgs">
+          <img src="img/find_1.png" alt="Find - console Firestore" style="grid-column:1/-1; max-height:200px; object-fit:cover;">
+        </div>
       </div>
     </div>
   </div>
@@ -927,7 +954,7 @@
           <li>Respect du RGPD pour les données personnelles (localisation, profil)</li>
         </ul>
         <div class="modal-imgs">
-          <img src="img/find_1.png" alt="Find App" style="grid-column:1/-1; max-height:200px; object-fit:cover;">
+          <img src="img/find_accueil.png" alt="Find - écran accueil"><img src="img/find_profil.png" alt="Find - écran profil">
         </div>
       </div>
     </div>
@@ -949,6 +976,9 @@
           <li>Suivi de l'avancement via Linear et coordination quotidienne en binôme</li>
           <li>Gestion de version Git/GitHub avec branches par fonctionnalité</li>
         </ul>
+        <div class="modal-imgs">
+          <img src="img/find_linear.png" alt="Find - Linear board" style="grid-column:1/-1; max-height:200px; object-fit:cover;">
+        </div>
       </div>
     </div>
   </div>
@@ -967,6 +997,9 @@
           <li>Tests unitaires et d'intégration Flutter</li>
           <li>Build release Android de l'application</li>
         </ul>
+        <div class="modal-imgs">
+          <img src="img/find_1.png" alt="Find - console Firebase" style="grid-column:1/-1; max-height:200px; object-fit:cover;">
+        </div>
       </div>
     </div>
   </div>
@@ -986,6 +1019,9 @@
           <li>Pratique de flutter_bloc (Cubit) et injection de dépendances (GetIt)</li>
           <li>Rédaction de documentation technique (MANIFESTO architecture, documentation Firebase)</li>
         </ul>
+        <div class="modal-imgs">
+          <img src="img/find_accueil.png" alt="Find - écran accueil"><img src="img/find_profil.png" alt="Find - écran profil">
+        </div>
       </div>
     </div>
   </div>
