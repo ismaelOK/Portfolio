@@ -115,7 +115,13 @@
       <div style="padding:2rem;">
         <div class="project-type">Stage 2ème année · Session 2026 · Flutter &amp; Firebase</div>
         <h3 style="font-size:1.4rem; font-weight:800; color:var(--text); margin-bottom:1rem;">Find — Découverte d'activités en temps réel</h3>
-        <img src="img/find_1.png" alt="Find app — découverte d'activités, détail et chat" style="width:100%; max-height:320px; object-fit:cover; border-radius:10px; margin-bottom:1.75rem; border:1px solid var(--border);">
+        <div style="display:grid; grid-template-columns:repeat(4,1fr); gap:0.75rem; margin-bottom:1.75rem;">
+          <img src="img/find_linear.png" alt="Find — Linear board" style="width:100%; height:160px; object-fit:cover; border-radius:8px; border:1px solid var(--border); grid-column:1/3;">
+          <img src="img/find_profil.png" alt="Find — écran profil" style="width:100%; height:160px; object-fit:cover; border-radius:8px; border:1px solid var(--border);">
+          <img src="img/find_calendrier.png" alt="Find — calendrier" style="width:100%; height:160px; object-fit:cover; border-radius:8px; border:1px solid var(--border);">
+          <img src="img/find_accueil.png" alt="Find — accueil activités" style="width:100%; height:160px; object-fit:cover; border-radius:8px; border:1px solid var(--border); grid-column:1/3;">
+          <img src="img/find_1.png" alt="Find — vue détail" style="width:100%; height:160px; object-fit:cover; border-radius:8px; border:1px solid var(--border); grid-column:3/5;">
+        </div>
 
         <div class="grid-2" style="gap:2rem; align-items:start;">
           <div>
@@ -144,6 +150,7 @@
               <span class="tag">Cloud Functions</span>
               <span class="tag">Géolocalisation</span>
               <span class="tag purple">flutter_bloc / Cubit</span>
+              <span class="tag purple">Méthode Agile</span>
               <span class="tag amber">Stage · En binôme</span>
             </div>
           </div>
@@ -151,14 +158,14 @@
             <div style="background:var(--surface2); border:1px solid var(--border); border-radius:10px; padding:1.25rem; margin-bottom:1rem;">
               <h4 style="font-size:0.82rem; font-weight:700; color:var(--accent3); margin-bottom:0.85rem; text-transform:uppercase; letter-spacing:0.06em;">Architecture &amp; fonctionnalités</h4>
               <ul style="padding-left:1.1rem; color:var(--text-muted); font-size:0.87rem; line-height:1.8;">
+                <li>Gestion de projet en <strong style="color:var(--text)">méthode Agile</strong> avec <strong style="color:var(--text)">Linear</strong> (tickets, backlog, sprints)</li>
                 <li>Pattern <strong style="color:var(--text)">MVVM</strong> strict : views → viewmodels → services → models</li>
                 <li>Gestion d'état par <strong style="color:var(--text)">Cubit</strong> (flutter_bloc)</li>
                 <li>Navigation déclarative via <strong style="color:var(--text)">GoRouter</strong></li>
                 <li>Injection de dépendances via <strong style="color:var(--text)">GetIt</strong></li>
                 <li>11 services Firebase encapsulés dans la couche <code style="color:var(--accent3); font-size:0.85em;">services/</code></li>
                 <li>Requêtes géospatiales Firestore avec GeoFlutterFire Plus</li>
-                <li>Cloud Function d'expiration planifiée (toutes les 5 min)</li>
-                <li>Tests unitaires et d'intégration</li>
+                <li>Cloud Functions planifiées (expiration activités toutes les 5 min)</li>
               </ul>
             </div>
             <div style="background:var(--surface2); border:1px solid var(--border); border-radius:10px; padding:1rem;">
