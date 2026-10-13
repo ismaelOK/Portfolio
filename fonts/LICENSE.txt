@@ -1,0 +1,4 @@
+Archivo (c) The Archivo Project Authors, et Newsreader (c) The Newsreader Project Authors.
+Les deux polices sont distribuées sous licence SIL Open Font License 1.1 :
+https://openfontlicense.org
+Fichiers issus des paquets @fontsource-variable/archivo et @fontsource-variable/newsreader (sous-ensemble latin).

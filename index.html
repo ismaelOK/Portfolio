@@ -3,211 +3,236 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Portfolio – Ismael Ounacer | BTS SIO SLAM 2026</title>
+  <title>Ismael Ounacer Kachou : développeur backend Java / Spring Boot</title>
+  <meta name="description" content="Portfolio d'Ismael Ounacer Kachou, développeur backend Java / Spring Boot, diplômé d'un BTS SIO option SLAM. Projets, stack technique et parcours.">
+  <meta name="theme-color" content="#0d2b66">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230d2b66'/%3E%3Cpath d='M8 8h16M16 8v16M8 24h16' stroke='%239be15d' stroke-width='3' fill='none'/%3E%3C/svg%3E">
+  <link rel="preload" href="fonts/archivo-latin-standard-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <nav>
-    <ul>
-      <li><a href="index.html" class="nav-logo">Ismael <span>·</span> Portfolio</a></li>
-      <li><a href="index.html">Accueil</a></li>
-      <li><a href="competences.html">Compétences</a></li>
-      <li><a href="projets.html">Projets</a></li>
-      <li><a href="veille.html">Veille</a></li>
-    </ul>
-  </nav>
+  <a class="skip" href="#contenu">Aller au contenu</a>
+  <div class="sheet">
+    <header class="top">
+      <a class="brand" href="index.html">Ismael Ounacer Kachou</a>
+      <nav class="menu" aria-label="Navigation principale">
+        <a href="index.html" aria-current="page">Accueil</a>
+        <a href="projets.html">Projets</a>
+        <a href="stack.html">Stack</a>
+        <a href="parcours.html">Parcours</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
 
-  <!-- Hero -->
-  <div class="hero">
-    <div class="hero-badge">BTS SIO · Option SLAM · Session 2026</div>
-    <h1>Ismael Ounacer</h1>
-    <div class="hero-actions">
-      <a href="projets.html" class="btn btn-primary">Voir mes projets</a>
-      <a href="competences.html" class="btn btn-outline">Mes compétences</a>
-    </div>
+    <main id="contenu">
+      <section class="hero">
+        <div class="wrap hero__grid">
+          <div>
+            <p class="status">Disponible pour un stage ou un premier poste en développement</p>
+            <h1 class="h1 name"><span>Ismael</span> <span>Ounacer</span> <span>Kachou</span></h1>
+            <p class="role">Développeur backend Java / Spring Boot</p>
+            <p class="hero__text">
+              Diplômé d'un BTS SIO option SLAM, je construis des API et des applications concrètes,
+              y compris en dehors du cadre scolaire.
+            </p>
+            <div class="actions">
+              <a class="btn btn--solid" href="projets.html">Voir les projets</a>
+              <a class="btn" href="mailto:ismaeloatxuri@gmail.com">Envoyer un e-mail</a>
+            </div>
+          </div>
+
+          <figure class="trace" id="trace">
+            <p class="trace__cap">Une requête, de bout en bout</p>
+            <p class="trace__sub">Les technologies que je pratique, placées là où elles interviennent.</p>
+
+            <svg viewBox="0 0 480 620" role="group" aria-label="Schéma en couches : clients web et mobile, API REST, services, persistance, bases de données, livraison">
+              <!-- Flèches entre les couches : requête à gauche (descend), réponse à droite (remonte) -->
+              <g class="flow-head" aria-hidden="true">
+                <polygon points="125.5,100 134.5,100 130,108"/><polygon points="185.5,90 194.5,90 190,82"/>
+                <polygon points="125.5,210 134.5,210 130,218"/><polygon points="185.5,200 194.5,200 190,192"/>
+                <polygon points="125.5,304 134.5,304 130,312"/><polygon points="185.5,294 194.5,294 190,286"/>
+                <polygon points="125.5,404 134.5,404 130,412"/><polygon points="185.5,388 194.5,388 190,380"/>
+              </g>
+              <g class="flow" aria-hidden="true">
+                <path d="M130 82V101M190 108V89"/>
+                <path d="M130 192V211M190 218V199"/>
+                <path d="M130 286V305M190 312V293"/>
+                <path d="M130 380V405M190 412V387"/>
+                <path class="flow--dash" d="M310 150H334M310 252H334"/>
+              </g>
+
+              <!-- Clients -->
+              <g class="node node--l" tabindex="0" style="--d1:0s;--d2:4.3s" data-note="React et TypeScript pour le web : l'interface qui appelle l'API.">
+                <rect x="10" y="10" width="224" height="70"/>
+                <text class="node__title" x="24" y="36">Web</text>
+                <text class="node__sub" x="24" y="60">React, TypeScript</text>
+              </g>
+              <g class="node" tabindex="0" data-note="Flutter et Dart pour le mobile : l'application qui appelle la même API.">
+                <rect x="246" y="10" width="224" height="70"/>
+                <text class="node__title" x="260" y="36">Mobile</text>
+                <text class="node__sub" x="260" y="60">Flutter, Dart</text>
+              </g>
+
+              <!-- API + sécurité -->
+              <g class="node node--l" tabindex="0" style="--d1:.45s;--d2:3.8s" data-note="Java 17/21 et Spring Boot : des endpoints REST qui reçoivent les requêtes et renvoient les réponses.">
+                <rect x="10" y="110" width="300" height="80"/>
+                <text class="node__title" x="24" y="138">API REST</text>
+                <text class="node__sub" x="24" y="162">Java 17/21, Spring Boot</text>
+              </g>
+              <g class="node" tabindex="0" data-note="Spring Security avec des jetons JWT : qui est connecté, et ce qu'il a le droit de faire.">
+                <rect x="334" y="110" width="136" height="80"/>
+                <text class="node__title" x="346" y="138">Sécurité</text>
+                <text class="node__sub" x="346" y="158">Spring Security</text>
+                <text class="node__sub" x="346" y="176">JWT</text>
+              </g>
+
+              <!-- Services + tests -->
+              <g class="node node--l" tabindex="0" style="--d1:.95s;--d2:3.3s" data-note="La logique métier, séparée des contrôleurs pour rester simple à tester.">
+                <rect x="10" y="220" width="300" height="64"/>
+                <text class="node__title" x="24" y="246">Services</text>
+                <text class="node__sub" x="24" y="268">Logique métier</text>
+              </g>
+              <g class="node" tabindex="0" data-note="JUnit pour écrire les tests, Mockito pour isoler les dépendances.">
+                <rect x="334" y="220" width="136" height="64"/>
+                <text class="node__title" x="346" y="246">Tests</text>
+                <text class="node__sub" x="346" y="268">JUnit, Mockito</text>
+              </g>
+
+              <!-- Persistance -->
+              <g class="node node--l" tabindex="0" style="--d1:1.4s;--d2:2.8s" data-note="Spring Data JPA : les entités et les requêtes, sans répéter du SQL partout.">
+                <rect x="10" y="314" width="460" height="64"/>
+                <text class="node__title" x="24" y="340">Persistance</text>
+                <text class="node__sub" x="24" y="362">Spring Data JPA</text>
+              </g>
+
+              <!-- Bases de données -->
+              <g class="node node--l" tabindex="0" transform="translate(10 414)" style="--d1:2s;--d2:2.3s" data-note="PostgreSQL pour le relationnel, avec du SQL avancé pour les requêtes plus poussées.">
+                <path d="M0 14V66A70 14 0 0 0 140 66V14A70 14 0 0 0 0 14Z"/>
+                <path class="rim" d="M0 14A70 14 0 0 0 140 14"/>
+                <text class="node__title" x="70" y="46" text-anchor="middle">PostgreSQL</text>
+                <text class="node__sub" x="70" y="64" text-anchor="middle">relationnel</text>
+              </g>
+              <g class="node" tabindex="0" transform="translate(170 414)" data-note="MySQL, l'autre base relationnelle que j'utilise, notamment avec PHP.">
+                <path d="M0 14V66A70 14 0 0 0 140 66V14A70 14 0 0 0 0 14Z"/>
+                <path class="rim" d="M0 14A70 14 0 0 0 140 14"/>
+                <text class="node__title" x="70" y="46" text-anchor="middle">MySQL</text>
+                <text class="node__sub" x="70" y="64" text-anchor="middle">relationnel</text>
+              </g>
+              <g class="node" tabindex="0" transform="translate(330 414)" data-note="Firestore (Firebase) : une base de données temps réel, utilisée pour l'application Find.">
+                <path d="M0 14V66A70 14 0 0 0 140 66V14A70 14 0 0 0 0 14Z"/>
+                <path class="rim" d="M0 14A70 14 0 0 0 140 14"/>
+                <text class="node__title" x="70" y="46" text-anchor="middle">Firestore</text>
+                <text class="node__sub" x="70" y="64" text-anchor="middle">Firebase</text>
+              </g>
+
+              <!-- Livraison -->
+              <g class="node node--env" tabindex="0" data-note="Docker pour empaqueter l'application, GitHub Actions et GitLab CI pour automatiser le build et les tests, avec des notions d'AWS.">
+                <rect x="10" y="530" width="460" height="70"/>
+                <text class="node__title" x="24" y="558">Livraison</text>
+                <text class="node__sub" x="24" y="582">Docker, GitHub Actions, GitLab CI, notions d'AWS</text>
+              </g>
+
+              <!-- La requête qui traverse les couches -->
+              <g class="packet" visibility="hidden" aria-hidden="true">
+                <circle r="11" fill="#9be15d" opacity="0.25"/>
+                <circle r="5" fill="#9be15d"/>
+                <animateMotion id="mv" dur="4.4s" begin="indefinite" fill="remove" path="M130 45V460H190V45"/>
+                <set attributeName="visibility" to="visible" begin="mv.begin" end="mv.end"/>
+              </g>
+            </svg>
+
+            <p class="trace__note" id="trace-note" aria-live="polite">Survolez ou sélectionnez une couche pour voir son rôle.</p>
+            <div class="trace__bar">
+              <button class="btn btn--small" type="button" id="replay">Rejouer la requête</button>
+            </div>
+          </figure>
+        </div>
+      </section>
+
+      <section class="band" id="projets">
+        <div class="wrap">
+          <div class="band-head">
+            <h2 class="h2">Ce que j'ai construit</h2>
+            <a class="textlink" href="projets.html">Voir tous les projets</a>
+          </div>
+          <div class="plist">
+            <a class="prow" href="projets.html#find">
+              <span class="prow__name">Find</span>
+              <span class="prow__desc">Application mobile pour découvrir, créer et rejoindre des activités à proximité.</span>
+              <span class="prow__meta"><b>Flutter, Firebase, Cloud Functions</b>Stage, 2026</span>
+            </a>
+            <a class="prow" href="projets.html#claviers-citoyens">
+              <span class="prow__name">Aux Claviers Citoyens</span>
+              <span class="prow__desc">API REST de gestion de compétitions e-sport, avec authentification par jetons JWT.</span>
+              <span class="prow__meta"><b>PHP, MySQL, JWT</b>Activité professionnelle</span>
+            </a>
+            <a class="prow" href="projets.html#m2l">
+              <span class="prow__name">M2L</span>
+              <span class="prow__desc">Site de gestion de formations et d'inscriptions, avec comptes par rôle.</span>
+              <span class="prow__meta"><b>PHP, MySQL, MVC</b>2024 à 2025</span>
+            </a>
+            <a class="prow" href="projets.html#eklekktik">
+              <span class="prow__name">Eklekktik</span>
+              <span class="prow__desc">Application Android pour une association culturelle.</span>
+              <span class="prow__meta"><b>Android, Java, API REST</b>Stage, 2025</span>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="band" id="apropos">
+        <div class="wrap">
+          <div class="band-head">
+            <h2 class="h2">À propos</h2>
+          </div>
+          <div class="about">
+            <div>
+              <p>
+                Diplômé d'un BTS SIO option SLAM au lycée Gustave Eiffel de Bordeaux, j'aime développer
+                et créer. J'apprends de façon autonome et je construis des projets concrets en dehors
+                du cadre scolaire.
+              </p>
+              <p>
+                Mon terrain, c'est le backend : des API REST en Java et Spring Boot, la sécurité par jetons JWT,
+                des bases de données relationnelles. J'ai aussi développé des applications mobiles avec Flutter
+                et Firebase, et des sites en PHP.
+              </p>
+              <div class="actions">
+                <a class="btn" href="stack.html">Voir la stack complète</a>
+                <a class="btn" href="parcours.html">Voir le parcours</a>
+              </div>
+            </div>
+            <dl class="facts">
+              <div><dt>Diplôme</dt><dd>BTS SIO option SLAM, lycée Gustave Eiffel, Bordeaux</dd></div>
+              <div><dt>Baccalauréat</dt><dd>STMG Gestion et Finance</dd></div>
+              <div><dt>Langues</dt><dd>Espagnol (natif), français (courant), anglais (C1), basque (notions)</dd></div>
+              <div><dt>Bénévolat</dt><dd>Mentorat scolaire avec l'AFEV, 2025 à 2026</dd></div>
+              <div><dt>Hors du code</dt><dd>Arts visuels et dessin numérique sur Krita</dd></div>
+            </dl>
+          </div>
+        </div>
+      </section>
+
+      <section class="band" id="contact">
+        <div class="wrap">
+          <h2 class="contact__title">Un stage, un poste, un projet à discuter ?</h2>
+          <a class="mail" href="mailto:ismaeloatxuri@gmail.com">ismaeloatxuri@gmail.com</a>
+          <p class="contact__more">
+            <a class="textlink" href="https://github.com/ismaelok" target="_blank" rel="noopener">github.com/ismaelok</a>
+            <span>Saint-Gaudens, France</span>
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="tblock" aria-label="Cartouche de la planche">
+      <div class="tb"><span class="tb__k">Projet</span><span class="tb__v">Portfolio de développeur backend</span></div>
+      <div class="tb"><span class="tb__k">Auteur</span><span class="tb__v">Ismael Ounacer Kachou</span></div>
+      <div class="tb"><span class="tb__k">Planche</span><span class="tb__v">Accueil (1 sur 4)</span></div>
+      <div class="tb"><span class="tb__k">Mise à jour</span><span class="tb__v">Octobre 2026</span></div>
+      <div class="tb"><span class="tb__k">Contact</span><span class="tb__v"><a href="mailto:ismaeloatxuri@gmail.com">ismaeloatxuri@gmail.com</a></span></div>
+    </footer>
   </div>
-
-  <main>
-    <!-- About -->
-    <section>
-      <div class="section-head">
-        <h2>À propos</h2>
-        <p>Qui suis-je et d'où je viens</p>
-      </div>
-      <div class="grid-2" style="align-items:start;">
-        <div>
-          <p style="color:var(--text-muted); line-height:1.8; margin-bottom:1rem;">
-            Je suis en <strong style="color:var(--text)">BTS SIO option SLAM</strong> au lycée Gustave Eiffel.
-            J'ai fait du développement web, mobile et des APIs pendant ma formation : web en cours, mobile en stage.
-          </p>
-          <p style="color:var(--text-muted); line-height:1.8; margin-bottom:1rem;">
-            Ce qui m'attire vraiment c'est l'informatique graphique : le rendu temps réel, les shaders, comment un GPU transforme des maths en image. C'est là que le code et l'art se rejoignent pour moi.
-          </p>
-          <p style="color:var(--text-muted); line-height:1.8;">
-            Sur ce portfolio tu retrouves mes projets de formation et de stage, mes compétences Bloc 1, et ma veille sur les APIs graphiques.
-          </p>
-        </div>
-        <ul class="info-list">
-          <li>
-            <span class="label">Formation</span>
-            <span>BTS SIO option SLAM</span>
-          </li>
-          <li>
-            <span class="label">Établissement</span>
-            <span>Lycée Gustave Eiffel</span>
-          </li>
-          <li>
-            <span class="label">Session</span>
-            <span>2026</span>
-          </li>
-          <li>
-            <span class="label">Spécialisation</span>
-            <span>Développement web &amp; mobile, APIs, bases de données</span>
-          </li>
-          <li>
-            <span class="label">Intérêts</span>
-            <span>Informatique graphique, rendu temps réel, shaders</span>
-          </li>
-          <li>
-            <span class="label">Langues</span>
-            <span>Français, Espagnol (maternel), Anglais</span>
-          </li>
-        </ul>
-      </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <!-- Parcours -->
-    <section>
-      <div class="section-head">
-        <h2>Parcours de professionnalisation</h2>
-        <p>Mes expériences en formation et en entreprise</p>
-      </div>
-      <div class="timeline">
-        <div class="timeline-item">
-          <div class="timeline-date">2023 – 2026</div>
-          <div class="timeline-title">BTS SIO option SLAM</div>
-          <div class="timeline-sub">Lycée Gustave Eiffel</div>
-          <div class="timeline-desc">
-            Formation aux métiers du développement logiciel : conception et développement
-            d'applications (web, mobile, API), gestion de bases de données, travail en mode projet,
-            déploiement de services informatiques, et veille technologique continue.
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-date">Stage 2ème année · Session 2025</div>
-          <div class="timeline-title">Développement d'une application mobile</div>
-          <div class="timeline-sub">Eklekktik, association culturelle</div>
-          <div class="timeline-desc">
-            Conception et développement d'une application mobile pour l'association Eklekktik.
-            Participation aux réunions d'équipe, prise en charge du cycle de développement complet
-            et livraison d'une application fonctionnelle aux membres de l'association.
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-date">Stage 2ème année · Session 2026</div>
-          <div class="timeline-title">Find : Application mobile de découverte d'activités</div>
-          <div class="timeline-sub">Développement en binôme · Flutter &amp; Firebase</div>
-          <div class="timeline-desc">
-            Conception et développement complet d'une application mobile multiplateforme (Android &amp; iOS)
-            permettant de découvrir, créer et rejoindre des activités à proximité.
-            Stack : Flutter/Dart, Firebase (Firestore, Auth, Storage, Cloud Functions), architecture MVVM,
-            géolocalisation temps réel. Conduit en binôme en méthode Agile avec Linear, avec roadmap,
-            documentation technique et comptes rendus de stage formalisés.
-          </div>
-        </div>
-        <div class="timeline-item">
-          <div class="timeline-date">AP Formation</div>
-          <div class="timeline-title">Projets en classe (AP)</div>
-          <div class="timeline-sub">Activités Professionnelles en formation</div>
-          <div class="timeline-desc">
-            Réalisation de projets guidés : site dynamique M2L (gestion de formations),
-            API REST Aux Claviers Citoyens (plateforme e-sport, module d'authentification JWT).
-            Travail en groupe, gestion de versions, respect de cahiers des charges.
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <!-- Navigation cards -->
-    <section>
-      <div class="section-head">
-        <h2>Explorer le portfolio</h2>
-        <p>Les sections du dossier E4</p>
-      </div>
-      <div class="grid-3">
-        <a href="competences.html" class="card" style="text-decoration:none;">
-          <div style="font-size:0.7rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--accent); margin-bottom:0.75rem;">Bloc 1</div>
-          <h3>Compétences</h3>
-          <p>Tableau de synthèse des compétences mobilisées sur l'ensemble des projets et stages.</p>
-        </a>
-        <a href="projets.html" class="card" style="text-decoration:none;">
-          <div style="font-size:0.7rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--accent); margin-bottom:0.75rem;">Réalisations</div>
-          <h3>Projets</h3>
-          <p>Find, M2L, Eklekktik, API Aux Claviers Citoyens : descriptions et captures d'écran.</p>
-        </a>
-        <a href="veille.html" class="card" style="text-decoration:none;">
-          <div style="font-size:0.7rem; font-weight:700; letter-spacing:0.12em; text-transform:uppercase; color:var(--accent); margin-bottom:0.75rem;">B1.6</div>
-          <h3>Veille technologique</h3>
-          <p>Veille sur les APIs graphiques (OpenGL, Vulkan, WebGL) : sources, synthèse, bilan personnel.</p>
-        </a>
-      </div>
-    </section>
-
-    <div class="divider"></div>
-
-    <!-- Skills -->
-    <section>
-      <div class="section-head">
-        <h2>Technologies & outils</h2>
-      </div>
-      <div class="grid-4">
-        <div class="card" style="padding:1.25rem;">
-          <h3 style="font-size:0.85rem; margin-bottom:0.75rem; color:var(--accent3);">Développement</h3>
-          <div class="tags">
-            <span class="tag">PHP</span>
-            <span class="tag">JavaScript</span>
-            <span class="tag">Python</span>
-            <span class="tag">Java</span>
-            <span class="tag">HTML/CSS</span>
-          </div>
-        </div>
-        <div class="card" style="padding:1.25rem;">
-          <h3 style="font-size:0.85rem; margin-bottom:0.75rem; color:var(--accent3);">Mobile & Web</h3>
-          <div class="tags">
-            <span class="tag">Flutter / Dart</span>
-            <span class="tag">Android</span>
-            <span class="tag">REST API</span>
-            <span class="tag">Firebase</span>
-          </div>
-        </div>
-        <div class="card" style="padding:1.25rem;">
-          <h3 style="font-size:0.85rem; margin-bottom:0.75rem; color:var(--accent3);">Base de données</h3>
-          <div class="tags">
-            <span class="tag">MySQL</span>
-            <span class="tag">SQL</span>
-            <span class="tag">PhpMyAdmin</span>
-          </div>
-        </div>
-        <div class="card" style="padding:1.25rem;">
-          <h3 style="font-size:0.85rem; margin-bottom:0.75rem; color:var(--accent3);">Outils</h3>
-          <div class="tags">
-            <span class="tag">Git</span>
-            <span class="tag">GitHub</span>
-            <span class="tag">Linear</span>
-            <span class="tag">VS Code</span>
-          </div>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    Portfolio BTS SIO SLAM · Ismael Ounacer · Lycée Gustave Eiffel · Session <span>2026</span>
-  </footer>
-  <script src="lightbox.js"></script>
+  <script src="trace.js"></script>
 </body>
 </html>
