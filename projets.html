@@ -5,14 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projets : Ismael Ounacer Kachou</title>
   <meta name="description" content="Projets d'Ismael Ounacer Kachou : Find (Flutter, Firebase), API Aux Claviers Citoyens (REST, JWT), M2L (PHP, MySQL) et Eklekktik (Android).">
-  <meta name="theme-color" content="#0d2b66">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230d2b66'/%3E%3Cpath d='M8 8h16M16 8v16M8 24h16' stroke='%239be15d' stroke-width='3' fill='none'/%3E%3C/svg%3E">
-  <link rel="preload" href="fonts/archivo-latin-standard-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#111315" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2316181b'/%3E%3Cpath d='M9 9h14M16 9v14M9 23h14' stroke='%235fd08a' stroke-width='3' fill='none'/%3E%3C/svg%3E">
+  <link rel="preload" href="fonts/ibm-plex-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <a class="skip" href="#contenu">Aller au contenu</a>
-  <div class="sheet">
+  <div class="wrap">
     <header class="top">
       <a class="brand" href="index.html">Ismael Ounacer Kachou</a>
       <nav class="menu" aria-label="Navigation principale">
@@ -25,33 +26,31 @@
     </header>
 
     <main id="contenu">
-      <div class="wrap page-head">
+
+      <section class="page-head">
         <h1 class="h1">Projets</h1>
         <p class="lead">Réalisations professionnelles en formation, en stage et en milieu associatif.</p>
-      </div>
+      </section>
 
-      <!-- Find -->
-      <article class="wrap proj" id="find">
-        <aside class="proj__side">
+      <article class="row" id="find">
+        <div class="row__label row__label--sticky">
           <dl class="meta">
             <div><dt>Contexte</dt><dd>Stage, en binôme</dd></div>
             <div><dt>Année</dt><dd>2026</dd></div>
             <div><dt>Stack</dt><dd>Flutter, Firebase</dd></div>
           </dl>
-        </aside>
+        </div>
         <div class="proj__body">
-          <h2 class="proj__title">Find<small>Découverte d'activités en temps réel</small></h2>
-
+          <h2 class="proj__title">Find<span class="proj__sub">Découverte d'activités en temps réel</span></h2>
           <div class="figs">
-            <figure class="fig fig--wide"><img src="img/find_linear.png" alt="Find : tableau Linear de gestion Agile"><figcaption>Tableau Linear : tickets, backlog et sprints</figcaption></figure>
-            <div class="figs figs--3" style="margin-bottom:0">
+            <figure class="fig fig--wide fig--full"><img src="img/find_linear.png" alt="Find : tableau Linear de gestion Agile"><figcaption>Tableau Linear : tickets, backlog et sprints</figcaption></figure>
+            <div class="figs figs--3" style="margin:0;grid-column:1/-1">
               <figure class="fig fig--phone"><img src="img/find_accueil.png" alt="Find : écran d'accueil"><figcaption>Accueil</figcaption></figure>
               <figure class="fig fig--phone"><img src="img/find_calendrier.png" alt="Find : calendrier"><figcaption>Calendrier</figcaption></figure>
               <figure class="fig fig--phone"><img src="img/find_profil.png" alt="Find : écran de profil"><figcaption>Profil</figcaption></figure>
             </div>
-            <figure class="fig fig--wide"><img src="img/find_1.png" alt="Find : console Firestore"><figcaption>Console Firestore</figcaption></figure>
+            <figure class="fig fig--wide fig--full"><img src="img/find_1.png" alt="Find : console Firestore"><figcaption>Console Firestore</figcaption></figure>
           </div>
-
           <p>
             Application mobile multiplateforme (Android &amp; iOS) développée avec un camarade durant le dernier stage.
             <strong>Find</strong> permet à ses utilisateurs de découvrir des activités organisées
@@ -70,8 +69,7 @@
             Firebase Storage pour les médias, et Cloud Functions v2 pour les tâches planifiées
             (expiration automatique des activités, recalcul des scores de popularité).
           </p>
-
-          <div class="panel">
+          <div class="details">
             <h3>Architecture et fonctionnalités</h3>
             <ul>
               <li>Gestion de projet en <strong>méthode Agile</strong> avec <strong>Linear</strong> (tickets, backlog, sprints)</li>
@@ -84,41 +82,19 @@
               <li>Cloud Functions planifiées (expiration des activités toutes les 5 min)</li>
             </ul>
           </div>
-
-          <div class="tags">
-            <span class="tag">Flutter / Dart</span>
-            <span class="tag">Firebase</span>
-            <span class="tag">Firestore</span>
-            <span class="tag">Cloud Functions</span>
-            <span class="tag">Géolocalisation</span>
-            <span class="tag">flutter_bloc / Cubit</span>
-            <span class="tag tag--hot">Méthode Agile</span>
-            <span class="tag tag--hot">Stage en binôme</span>
-          </div>
-          <div class="tags" style="margin-top:0.6rem">
-            <span class="tag">Authentification</span>
-            <span class="tag">Profil utilisateur</span>
-            <span class="tag">Découverte d'activités</span>
-            <span class="tag">Création d'activité</span>
-            <span class="tag">Chat par activité</span>
-            <span class="tag">Historique</span>
-            <span class="tag">Signalement</span>
-            <span class="tag">Quotas mensuels</span>
-          </div>
+          <p class="stackline"><b>Modules :</b> authentification, profil utilisateur, découverte d'activités, géolocalisation, création d'activité, chat par activité, historique, signalement, quotas mensuels.</p>
         </div>
       </article>
-
-      <!-- Aux Claviers Citoyens -->
-      <article class="wrap proj" id="claviers-citoyens">
-        <aside class="proj__side">
+      <article class="row" id="claviers-citoyens">
+        <div class="row__label row__label--sticky">
           <dl class="meta">
             <div><dt>Contexte</dt><dd>Activité professionnelle, en collaboration avec l'Armée française</dd></div>
             <div><dt>Ma contribution</dt><dd>Module d'authentification</dd></div>
             <div><dt>Stack</dt><dd>API REST, PHP, MySQL, JWT</dd></div>
           </dl>
-        </aside>
+        </div>
         <div class="proj__body">
-          <h2 class="proj__title">API « Aux Claviers Citoyens »<small>Plateforme e-sport</small></h2>
+          <h2 class="proj__title">API « Aux Claviers Citoyens »<span class="proj__sub">Plateforme e-sport</span></h2>
           <p>
             J'ai participé au développement d'une
             <strong>API REST dédiée à la gestion de compétitions e-sport</strong>,
@@ -134,7 +110,7 @@
             inscription, connexion sécurisée et gestion des sessions via tokens JWT, un seul type d'utilisateur,
             consommateur de l'API.
           </p>
-          <div class="panel">
+          <div class="details">
             <h3>Fonctionnalités développées</h3>
             <ul>
               <li>Inscription et connexion sécurisée (hash <strong>Argon2id</strong>)</li>
@@ -144,35 +120,23 @@
               <li>Documentation de l'API</li>
             </ul>
           </div>
-          <div class="tags">
-            <span class="tag">REST API</span>
-            <span class="tag">JWT</span>
-            <span class="tag">PHP</span>
-            <span class="tag">MySQL</span>
-            <span class="tag">Argon2id</span>
-            <span class="tag tag--hot">Travail en groupe</span>
-          </div>
         </div>
       </article>
-
-      <!-- M2L -->
-      <article class="wrap proj" id="m2l">
-        <aside class="proj__side">
+      <article class="row" id="m2l">
+        <div class="row__label row__label--sticky">
           <dl class="meta">
             <div><dt>Contexte</dt><dd>Activité professionnelle, groupe de 3</dd></div>
             <div><dt>Année</dt><dd>2024 à 2025</dd></div>
             <div><dt>Stack</dt><dd>PHP, MySQL, architecture MVC</dd></div>
           </dl>
-        </aside>
+        </div>
         <div class="proj__body">
-          <h2 class="proj__title">M2L<small>Site de gestion de formations</small></h2>
-
+          <h2 class="proj__title">M2L<span class="proj__sub">Site de gestion de formations</span></h2>
           <div class="figs figs--2">
             <figure class="fig fig--shot"><img src="img/m2l_1.png" alt="M2L : capture 1"></figure>
             <figure class="fig fig--shot"><img src="img/m2l_2.png" alt="M2L : capture 2"></figure>
             <figure class="fig fig--full fig--banner"><img src="img/m2l_3.png" alt="M2L : capture 3"></figure>
           </div>
-
           <p>
             J'ai travaillé en groupe de 3 sur un site web dynamique fourni par le lycée. Le projet consistait
             à continuer le développement d'une plateforme de gestion de formations.
@@ -185,36 +149,24 @@
           <p>
             J'ai également participé à la conception de la base de données et à l'intégration de l'interface.
           </p>
-          <div class="tags">
-            <span class="tag">PHP</span>
-            <span class="tag">MySQL</span>
-            <span class="tag">Architecture MVC</span>
-            <span class="tag">HTML/CSS</span>
-            <span class="tag">JavaScript</span>
-            <span class="tag tag--hot">Travail en groupe</span>
-          </div>
         </div>
       </article>
-
-      <!-- Eklekktik -->
-      <article class="wrap proj" id="eklekktik">
-        <aside class="proj__side">
+      <article class="row" id="eklekktik">
+        <div class="row__label row__label--sticky">
           <dl class="meta">
             <div><dt>Contexte</dt><dd>Stage, association culturelle</dd></div>
             <div><dt>Année</dt><dd>2025</dd></div>
             <div><dt>Stack</dt><dd>Android, Java, API REST</dd></div>
           </dl>
-        </aside>
+        </div>
         <div class="proj__body">
-          <h2 class="proj__title">Eklekktik<small>Application mobile associative</small></h2>
-
+          <h2 class="proj__title">Eklekktik<span class="proj__sub">Application mobile associative</span></h2>
           <div class="figs figs--2">
             <figure class="fig fig--shot"><img src="img/eklekktik_1.png" alt="Eklekktik : capture 1"></figure>
             <figure class="fig fig--shot"><img src="img/eklekktik_2.png" alt="Eklekktik : capture 2"></figure>
             <figure class="fig fig--shot"><img src="img/eklekktik_3.png" alt="Eklekktik : capture 3"></figure>
             <figure class="fig fig--shot"><img src="img/eklekktik_4.png" alt="Eklekktik : capture 4"></figure>
           </div>
-
           <p>
             Durant ce stage, au sein de l'association culturelle <strong>Eklekktik</strong>,
             j'ai participé à la conception et au développement d'une application mobile destinée aux membres et
@@ -229,23 +181,13 @@
             Ce projet m'a permis de travailler en conditions réelles au sein d'une équipe,
             de gérer les demandes d'évolution et de livrer une application opérationnelle.
           </p>
-          <div class="tags">
-            <span class="tag">Android</span>
-            <span class="tag">Java</span>
-            <span class="tag">API REST</span>
-            <span class="tag tag--hot">Association</span>
-            <span class="tag tag--hot">Stage</span>
-          </div>
         </div>
       </article>
     </main>
 
-    <footer class="tblock" aria-label="Cartouche de la planche">
-      <div class="tb"><span class="tb__k">Projet</span><span class="tb__v">Portfolio de développeur backend</span></div>
-      <div class="tb"><span class="tb__k">Auteur</span><span class="tb__v">Ismael Ounacer Kachou</span></div>
-      <div class="tb"><span class="tb__k">Planche</span><span class="tb__v">Projets (2 sur 4)</span></div>
-      <div class="tb"><span class="tb__k">Mise à jour</span><span class="tb__v">Octobre 2026</span></div>
-      <div class="tb"><span class="tb__k">Contact</span><span class="tb__v"><a href="mailto:ismaeloatxuri@gmail.com">ismaeloatxuri@gmail.com</a></span></div>
+    <footer class="foot">
+      <span>Ismael Ounacer Kachou, Saint-Gaudens</span>
+      <span><a href="mailto:ismaeloatxuri@gmail.com">ismaeloatxuri@gmail.com</a></span>
     </footer>
   </div>
   <script src="lightbox.js"></script>

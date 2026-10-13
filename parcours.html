@@ -5,14 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Parcours : Ismael Ounacer Kachou</title>
   <meta name="description" content="Parcours d'Ismael Ounacer Kachou : BTS SIO option SLAM, stages en développement mobile, projets de formation et mentorat bénévole avec l'AFEV.">
-  <meta name="theme-color" content="#0d2b66">
-  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230d2b66'/%3E%3Cpath d='M8 8h16M16 8v16M8 24h16' stroke='%239be15d' stroke-width='3' fill='none'/%3E%3C/svg%3E">
-  <link rel="preload" href="fonts/archivo-latin-standard-normal.woff2" as="font" type="font/woff2" crossorigin>
+  <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+  <meta name="theme-color" content="#111315" media="(prefers-color-scheme: dark)">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%2316181b'/%3E%3Cpath d='M9 9h14M16 9v14M9 23h14' stroke='%235fd08a' stroke-width='3' fill='none'/%3E%3C/svg%3E">
+  <link rel="preload" href="fonts/ibm-plex-sans-latin-wght-normal.woff2" as="font" type="font/woff2" crossorigin>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <a class="skip" href="#contenu">Aller au contenu</a>
-  <div class="sheet">
+  <div class="wrap">
     <header class="top">
       <a class="brand" href="index.html">Ismael Ounacer Kachou</a>
       <nav class="menu" aria-label="Navigation principale">
@@ -25,97 +26,75 @@
     </header>
 
     <main id="contenu">
-      <div class="wrap page-head">
+
+      <section class="page-head">
         <h1 class="h1">Parcours</h1>
         <p class="lead">Formation, stages et engagement associatif, du plus récent au plus ancien.</p>
-      </div>
+      </section>
 
-      <div class="wrap" style="padding-bottom:clamp(2.5rem,6vw,5rem)">
-        <section class="group">
-          <h2 class="h2 group__title">Expériences</h2>
-          <div>
-            <div class="rev">
-              <div class="rev__date">2026</div>
-              <div>
-                <h3 class="rev__title">Développeur mobile en stage</h3>
-                <p class="rev__where">Eklekktik, Bordeaux, 8 semaines, en binôme</p>
-                <p class="rev__desc">
-                  Développement d'une application mobile Flutter et Firebase pour l'association :
-                  gestion des utilisateurs, activités géolocalisées, base Firestore en temps réel.
-                  Méthode Agile avec Linear et GitLab. Voir le projet <a href="projets.html#find">Find</a>.
-                </p>
-              </div>
-            </div>
-            <div class="rev">
-              <div class="rev__date">2025 à 2026</div>
-              <div>
-                <h3 class="rev__title">Mentorat bénévole</h3>
-                <p class="rev__where">AFEV, Association de la Fondation Étudiante pour la Ville</p>
-                <p class="rev__desc">Accompagnement scolaire d'élèves en difficulté.</p>
-              </div>
-            </div>
-            <div class="rev">
-              <div class="rev__date">2025</div>
-              <div>
-                <h3 class="rev__title">Développement d'une application mobile</h3>
-                <p class="rev__where">Eklekktik, association culturelle, stage de 2ème année</p>
-                <p class="rev__desc">
-                  Conception et développement d'une application mobile pour l'association.
-                  Participation aux réunions d'équipe, prise en charge du cycle de développement complet
-                  et livraison d'une application fonctionnelle aux membres. Voir le projet
-                  <a href="projets.html#eklekktik">Eklekktik</a>.
-                </p>
-              </div>
-            </div>
-            <div class="rev">
-              <div class="rev__date">Pendant la formation</div>
-              <div>
-                <h3 class="rev__title">Projets en classe</h3>
-                <p class="rev__where">Activités professionnelles du BTS</p>
-                <p class="rev__desc">
-                  Réalisation de projets guidés : site dynamique <a href="projets.html#m2l">M2L</a> (gestion de formations)
-                  et API REST <a href="projets.html#claviers-citoyens">Aux Claviers Citoyens</a> (plateforme e-sport,
-                  module d'authentification JWT). Travail en groupe, gestion de versions, respect de cahiers des charges.
-                </p>
-              </div>
+      <section class="row">
+        <h2 class="row__label">Expériences</h2>
+        <div>
+          <div class="entry">
+            <div class="entry__date">2026</div>
+            <div>
+              <h3 class="entry__title">Développeur mobile en stage</h3>
+              <p class="entry__where">Eklekktik, Bordeaux, 8 semaines, en binôme</p>
+            <p class="entry__desc">Développement d'une application mobile Flutter et Firebase pour l'association : gestion des utilisateurs, activités géolocalisées, base Firestore en temps réel. Méthode Agile avec Linear et GitLab. Voir le projet <a href="projets.html#find">Find</a>.</p>
             </div>
           </div>
-        </section>
-
-        <section class="group">
-          <h2 class="h2 group__title">Formation</h2>
-          <div>
-            <div class="rev">
-              <div class="rev__date">2023 à 2026</div>
-              <div>
-                <h3 class="rev__title">BTS SIO option SLAM</h3>
-                <p class="rev__where">Solutions Logicielles et Applications Métiers, lycée Gustave Eiffel, Bordeaux. Diplôme d'État obtenu</p>
-                <p class="rev__desc">
-                  Formation aux métiers du développement logiciel : conception et développement
-                  d'applications (web, mobile, API), gestion de bases de données, travail en mode projet,
-                  déploiement de services informatiques.
-                  <a href="E4%20-Tableau%20de%20synthese.pdf" target="_blank" rel="noopener">Tableau de synthèse du dossier (PDF)</a>.
-                </p>
-              </div>
-            </div>
-            <div class="rev">
-              <div class="rev__date">Avant le BTS</div>
-              <div>
-                <h3 class="rev__title">Baccalauréat STMG, Gestion et Finance</h3>
-                <p class="rev__where">Lycée Bagatelle, Saint-Gaudens</p>
-              </div>
+          <div class="entry">
+            <div class="entry__date">2025 à 2026</div>
+            <div>
+              <h3 class="entry__title">Mentorat bénévole</h3>
+              <p class="entry__where">AFEV, Association de la Fondation Étudiante pour la Ville</p>
+            <p class="entry__desc">Accompagnement scolaire d'élèves en difficulté.</p>
             </div>
           </div>
-        </section>
-      </div>
+          <div class="entry">
+            <div class="entry__date">2025</div>
+            <div>
+              <h3 class="entry__title">Développement d'une application mobile</h3>
+              <p class="entry__where">Eklekktik, association culturelle, stage de 2ème année</p>
+            <p class="entry__desc">Conception et développement d'une application mobile pour l'association. Participation aux réunions d'équipe, prise en charge du cycle de développement complet et livraison d'une application fonctionnelle aux membres. Voir le projet <a href="projets.html#eklekktik">Eklekktik</a>.</p>
+            </div>
+          </div>
+          <div class="entry">
+            <div class="entry__date">Pendant la formation</div>
+            <div>
+              <h3 class="entry__title">Projets en classe</h3>
+              <p class="entry__where">Activités professionnelles du BTS</p>
+            <p class="entry__desc">Réalisation de projets guidés : site dynamique <a href="projets.html#m2l">M2L</a> (gestion de formations) et API REST <a href="projets.html#claviers-citoyens">Aux Claviers Citoyens</a> (plateforme e-sport, module d'authentification JWT). Travail en groupe, gestion de versions, respect de cahiers des charges.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="row">
+        <h2 class="row__label">Formation</h2>
+        <div>
+          <div class="entry">
+            <div class="entry__date">2023 à 2026</div>
+            <div>
+              <h3 class="entry__title">BTS SIO option SLAM</h3>
+              <p class="entry__where">Solutions Logicielles et Applications Métiers, lycée Gustave Eiffel, Bordeaux. Diplôme d'État obtenu</p>
+            <p class="entry__desc">Formation aux métiers du développement logiciel : conception et développement d'applications (web, mobile, API), gestion de bases de données, travail en mode projet, déploiement de services informatiques. <a href="E4%20-Tableau%20de%20synthese.pdf" target="_blank" rel="noopener">Tableau de synthèse du dossier (PDF)</a>.</p>
+            </div>
+          </div>
+          <div class="entry">
+            <div class="entry__date">Avant le BTS</div>
+            <div>
+              <h3 class="entry__title">Baccalauréat STMG, Gestion et Finance</h3>
+              <p class="entry__where">Lycée Bagatelle, Saint-Gaudens</p>
+            </div>
+          </div>
+        </div>
+      </section>
     </main>
 
-    <footer class="tblock" aria-label="Cartouche de la planche">
-      <div class="tb"><span class="tb__k">Projet</span><span class="tb__v">Portfolio de développeur backend</span></div>
-      <div class="tb"><span class="tb__k">Auteur</span><span class="tb__v">Ismael Ounacer Kachou</span></div>
-      <div class="tb"><span class="tb__k">Planche</span><span class="tb__v">Parcours (4 sur 4)</span></div>
-      <div class="tb"><span class="tb__k">Mise à jour</span><span class="tb__v">Octobre 2026</span></div>
-      <div class="tb"><span class="tb__k">Contact</span><span class="tb__v"><a href="mailto:ismaeloatxuri@gmail.com">ismaeloatxuri@gmail.com</a></span></div>
+    <footer class="foot">
+      <span>Ismael Ounacer Kachou, Saint-Gaudens</span>
+      <span><a href="mailto:ismaeloatxuri@gmail.com">ismaeloatxuri@gmail.com</a></span>
     </footer>
   </div>
 </body>
